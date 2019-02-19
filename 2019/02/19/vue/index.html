@@ -252,6 +252,30 @@
   
 
   
+  <div id="gitment-ctn"></div>
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    // id: "http://yoursite.com/2019/02/19/vue/",
+    id: '{{ page.date }}',
+    // owner: 'Animye',
+    owner: '{{ theme.gitment.github_user }}',
+    // repo: 'Animye.github.io',
+    repo: '{{ theme.gitment.github_repo }}',
+    oauth: {
+      client_id: 'c8096215035deb2e7daa',
+      client_secret: 'a58d752b35cb387ee4ce93fbaa167aed8518eeda'
+    }
+  })
+  gitment.render('gitment-ctn')
+</script>
+<!-- var gitment = new {{CommentsClass}}({
+  id: '{{ page.date }}',
+  owner: '{{ theme.gitment.github_user }}',
+  repo: '{{ theme.gitment.github_repo }}', -->
+
+  
 
 
           </div>
