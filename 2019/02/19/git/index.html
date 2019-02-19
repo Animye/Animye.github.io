@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>shell 命令 和 git 基础操作 | 华禹的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本 shell 命令 cd 命令 目录跳转 ./ 当前文件夹 ../上级 cd d: 跳转到 d 盘 cd ~ 跳转到用户主目录   ls 命令 查看当前文件夹下的所有内容 参数 -a 也可以查看隐藏文件">
+  <head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="dns-prefetch" href="http://yoursite.com">
+    <title>shell 命令 和 git 基础操作 | 华禹的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="基本 shell 命令 cd 命令 目录跳转 ./ 当前文件夹 ../上级 cd d: 跳转到 d 盘 cd ~ 跳转到用户主目录   ls 命令 查看当前文件夹下的所有内容 参数 -a 也可以查看隐藏文件">
 <meta name="keywords" content="shell,git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shell 命令 和 git 基础操作">
@@ -21,26 +21,23 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell 命令 和 git 基础操作">
 <meta name="twitter:description" content="基本 shell 命令 cd 命令 目录跳转 ./ 当前文件夹 ../上级 cd d: 跳转到 d 盘 cd ~ 跳转到用户主目录   ls 命令 查看当前文件夹下的所有内容 参数 -a 也可以查看隐藏文件">
-<meta name="twitter:image" content="http://i0.hdslb.com/bfs/archive/0fb66998d81910d1bcabe2c649cd083511524dfa.jpg">
-  
+<meta name="twitter:image" content="http://i0.hdslb.com/bfs/archive/0fb66998d81910d1bcabe2c649cd083511524dfa.jpg"> 
     <link rel="alternative" href="/atom.xml" title="华禹的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
-  <style type="text/css">
-  
-    #container.show {
-      background: linear-gradient(200deg,#a0cfe4,#e8c37e);
-    }
-  </style>
-  
+     
+    <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
+     <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
+    <style type="text/css">
+      
+        #container.show {
+          background: linear-gradient(200deg,#a0cfe4,#e8c37e);
+        }
+    </style>
+    
+ 
 
-  
-
-</head>
+  </head>
 </html>
+
 <body>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
@@ -48,53 +45,55 @@
       
 <div class="overlay" style="background: #4d4d4d"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="http://img5.imgtn.bdimg.com/it/u=1924821577,3618403016&amp;fm=26&amp;gp=0.jpg" class="js-avatar">
-		</a>
-		<hgroup>
-		  <h1 class="header-author"><a href="/">华禹</a></h1>
-		</hgroup>
-		
+  <header id="header" class="inner">
+    <a href="/" class="profilepic">
+      <img src="http://img5.imgtn.bdimg.com/it/u=1924821577,3618403016&amp;fm=26&amp;gp=0.jpg" class="js-avatar">
+    </a>
+    <hgroup>
+      <h1 class="header-author">
+        <a href="/">华禹</a>
+      </h1>
+    </hgroup>
+    
+    <p class="header-subtitle">你还有很多未完成的梦，还有什么理由停下脚步......</p>
+    
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/主题">随笔</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-    		
-    			
-    			<a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
+    <nav class="header-menu">
+      <ul>
+        
+        <li><a href="/">主页</a></li>
+        
+        <li><a href="/主题">随笔</a></li>
+        
+      </ul>
+    </nav>
+    <nav class="header-smart-menu">
+       
+      <a q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
+        
+      <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
+        
+      <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+       
+    </nav>
+    <nav class="header-nav">
+      <div class="social">
+        
+        <a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+        
+        <a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+        
+        <a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+        
+        <a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+        
+      </div>
+      <!--音乐播放插件-->
+      <div style="margin-top:30px;">
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="52" src="//music.163.com/outchain/player?type=2&id=33035954&auto=1&height=32"></iframe>
+      </div>
+    </nav>
+  </header>
 </div>
 
     </div>
@@ -113,6 +112,8 @@
 			<hgroup>
 			  <h1 class="header-author js-header-author">华禹</h1>
 			</hgroup>
+			
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>你还有很多未完成的梦，还有什么理由停下脚步......<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -160,24 +161,25 @@
             <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 class="article-title" itemprop="name">
       shell 命令 和 git 基础操作
     </h1>
   
-
-        
-        <a href="/2019/02/19/git/" class="archive-article-date">
+  <a href="/2019/02/19/git/" class="archive-article-date">
   	<time datetime="2019-02-19T02:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
-</a>
-        
-      </header>
+</a>  
+      <span class="archive-article-date">
+        阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
+      
+    </header>
+
     
     <div class="article-entry" itemprop="articleBody">
-      
-        <p><img src="http://i0.hdslb.com/bfs/archive/0fb66998d81910d1bcabe2c649cd083511524dfa.jpg" width="300" hegiht="100"></p>
+       <p><img src="http://i0.hdslb.com/bfs/archive/0fb66998d81910d1bcabe2c649cd083511524dfa.jpg" width="300" hegiht="100"></p>
 <h2 id="基本-shell-命令"><a href="#基本-shell-命令" class="headerlink" title="基本 shell 命令"></a>基本 shell 命令</h2><ul>
 <li>cd 命令 目录跳转 ./ 当前文件夹 ../上级<ul>
 <li>cd d: 跳转到 d 盘 cd ~ 跳转到用户主目录</li>
@@ -302,35 +304,33 @@
 <li>在 index.html 引入打包好的 dist 下面的 bundle.js</li>
 </ul>
 <p><strong>要确保打包的入口文件是 index.js,也就是说 src 下必须有 index.js</strong></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
+  
+      <div class="page-reward">
+        <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <div class="tooltip tooltip-east">
             <span class="tooltip-item">
               赏
             </span>
             <span class="tooltip-content">
               <span class="tooltip-text">
                 <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i></p>
+                  <p class="reward-p">
+                    <i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i>
+                  </p>
                   <div class="reward-box">
-                    
-                    
+                     
                   </div>
                 </span>
               </span>
             </span>
           </div>
-          </a>
-        </div>
+        </a>
+      </div>
       
     </div>
+
     <div class="article-info article-info-index">
-      
-      
+       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -345,18 +345,64 @@
       		
 		</ul>
 	</div>
+ 
+   
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
-      
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/19/git/" alt="微信分享二维码">
+  </div>
+</div>
 
-      
+<div class="mask js-mask"></div>
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
-
-  
+ 
 <nav id="article-nav">
   
   
@@ -366,9 +412,7 @@
     </a>
   
 </nav>
-
-
-<aside class="wrap-side-operation">
+  <aside class="wrap-side-operation">
     <div class="mod-side-operation">
         
         <div class="jump-container" id="js-jump-container" style="display:none;">
@@ -382,20 +426,7 @@
         
         
     </div>
-</aside>
-
-
-
-  
-  
-  
-
-  
-
-  
-
-  
-  <div id="gitment-ctn"></div>
+</aside>       <div id="gitment-ctn"></div>
 <!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css" />
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
 <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
@@ -423,9 +454,7 @@
   id: '{{ page.date }}',
   owner: '{{ theme.gitment.github_user }}',
   repo: '{{ theme.gitment.github_repo }}', -->
-
   
-
 
           </div>
         </div>
@@ -436,6 +465,9 @@
       <div class="footer-left">
         &copy; 2019 华禹
       </div>
+      <span id="busuanzi_container_site_uv">
+        本站访客数<span id="busuanzi_value_site_uv"></span>人次
+      </span>
       <div class="footer-right">
         <!-- <a href="http://hexo.io/" target="_blank"></a>   -->
         <a href target="_blank">原创主题</a> by 华禹
@@ -444,6 +476,7 @@
     </div>
   </div>
 </footer>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     </div>
     <script>
@@ -520,18 +553,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">shell - git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">react 基础</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
@@ -540,7 +561,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git - aa</a>
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">react 基础</a>
               </li>
             
             <div class="clearfix"></div>
