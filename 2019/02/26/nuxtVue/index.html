@@ -6,15 +6,20 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="dns-prefetch" href="http://yoursite.com">
-    <title>Tag: git | 华禹的博客</title>
+    <title>NUXT vue 的服务器端渲染(ssr) | 华禹的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="华禹的博客">
-<meta property="og:url" content="http://yoursite.com/tags/git/index.html">
+    <meta name="description" content="只要是刷新以及通过地址栏访问页面，就会在服务器端生成一个页面返回给浏览器。 安装 确保安装了 npm 并且 版本在 5.2.0 以上，使用 npx create-nuxt-app &amp;lt;项目名&amp;gt; 创建 nuxt 项目">
+<meta name="keywords" content="nuxt,vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NUXT vue 的服务器端渲染(ssr)">
+<meta property="og:url" content="http://yoursite.com/2019/02/26/nuxtVue/index.html">
 <meta property="og:site_name" content="华禹的博客">
+<meta property="og:description" content="只要是刷新以及通过地址栏访问页面，就会在服务器端生成一个页面返回给浏览器。 安装 确保安装了 npm 并且 版本在 5.2.0 以上，使用 npx create-nuxt-app &amp;lt;项目名&amp;gt; 创建 nuxt 项目">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-26T03:10:27.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="华禹的博客"> 
+<meta name="twitter:title" content="NUXT vue 的服务器端渲染(ssr)">
+<meta name="twitter:description" content="只要是刷新以及通过地址栏访问页面，就会在服务器端生成一个页面返回给浏览器。 安装 确保安装了 npm 并且 版本在 5.2.0 以上，使用 npx create-nuxt-app &amp;lt;项目名&amp;gt; 创建 nuxt 项目"> 
     <link rel="alternative" href="/atom.xml" title="华禹的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -159,65 +164,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-nuxtVue" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <header class="article-header">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/19/git/" class="archive-article-date">
-  	<time datetime="2019-02-19T02:21:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-19</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/19/git/">shell 命令 和 git 基础操作</a>
+    <h1 class="article-title" itemprop="name">
+      NUXT vue 的服务器端渲染(ssr)
     </h1>
   
+  <a href="/2019/02/26/nuxtVue/" class="archive-article-date">
+  	<time datetime="2019-02-26T02:49:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
+</a>  
+      <span class="archive-article-date">
+        阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
+      
+    </header>
 
-        <div class="article-info info-on-right">
-          
+    
+    <div class="article-entry" itemprop="articleBody">
+       <p><strong>只要是刷新以及通过地址栏访问页面，就会在服务器端生成一个页面返回给浏览器。</strong></p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>确保安装了 npm 并且 版本在 5.2.0 以上，使用 npx create-nuxt-app &lt;项目名&gt; 创建 nuxt 项目<a id="more"></a></li>
+<li>创建的过程中会有很多选项提供</li>
+</ol>
+<ul>
+<li>Project name nuxt-hello 回车</li>
+<li>Project description My outstanding Nuxt.js - - project 回车</li>
+<li>Use a custom server framework none</li>
+<li>Choose features to install Axios</li>
+<li>Use a custom UI framework none</li>
+<li>Use a custom test framework none</li>
+<li>Choose rendering mode Universal</li>
+<li>Author name (Sunny-zz) 回车</li>
+<li>Choose a package manager npm</li>
+</ul>
+<ol start="3">
+<li>分析目录结构</li>
+</ol>
+<ul>
+<li>assets 用于组织未编译的静态资源如 LESS、SASS 或 - - JavaScript</li>
+<li>static 一般放一些图标，图片</li>
+<li>components 子组件</li>
+<li>layouts 布局组件 头 主体 底</li>
+<li>middleware 中间件</li>
+<li>pages 路由</li>
+<li>plugins 插件</li>
+<li>store vuex 状态树</li>
+<li>nuxt.config.js nuxt 环境配置文件</li>
+</ul>
+<h4 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h4><h5 id="fetch-函数-替代-created"><a href="#fetch-函数-替代-created" class="headerlink" title="fetch 函数 替代 created"></a>fetch 函数 替代 created</h5><ul>
+<li>fetch 函数 第一个参数是 <code>context</code>,只在页面组件中（即在 pages 文件夹下的组件）</li>
+<li><code>context</code> 对象下都有哪些属性<br><a href="https://zh.nuxtjs.org/api/#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%AF%B9%E8%B1%A1" target="_blank" rel="noopener">参考地址</a></li>
+</ul>
+  
+      <div class="page-reward">
+        <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">
+                    <i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i>
+                  </p>
+                  <div class="reward-box">
+                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="article-info article-info-index">
+       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">shell</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">nuxt</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
 	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+ 
+  
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+ 
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/02/25/deployment/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Project deployment</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
+  <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>       <div id="gitment-ctn"></div>
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css" />
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<!-- <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script> -->
 
-    
-
+<script>
+  var gitment = new Gitment({
+    // id: 'http://yoursite.com/2019/02/26/nuxtVue/',
+    id: 'Tue Feb 26 2019 10:49:51 GMT+0800',
+    // id: '{{ page.date }}',
+    owner: 'Animye',
+    // owner: '{{ theme.gitment.github_user }}',
+    repo: 'Animye.github.io',
+    // repo: '{{ theme.gitment.github_repo }}',
+    oauth: {
+      client_id: 'c8096215035deb2e7daa',
+      client_secret: 'a58d752b35cb387ee4ce93fbaa167aed8518eeda'
+    }
+  })
+  gitment.render('gitment-ctn')
+</script>
+<!-- var gitment = new {{CommentsClass}}({
+  id: '{{ page.date }}',
+  owner: '{{ theme.gitment.github_user }}',
+  repo: '{{ theme.gitment.github_repo }}', -->
+  
 
           </div>
         </div>
@@ -246,9 +352,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
