@@ -6,15 +6,22 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="dns-prefetch" href="http://yoursite.com">
-    <title>Tag: 项目部署 | 华禹的博客</title>
+    <title>react 基础知识 | 华禹的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="华禹的博客">
-<meta property="og:url" content="http://yoursite.com/tags/项目部署/index.html">
+    <meta name="description" content="react 介绍之前的处理 直接操作 dom 节点，react vue angular 虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成正真的。 单页面应用搭建 react 开发环境">
+<meta name="keywords" content="react 基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react 基础知识">
+<meta property="og:url" content="http://yoursite.com/2019/02/18/htmlReact/index.html">
 <meta property="og:site_name" content="华禹的博客">
+<meta property="og:description" content="react 介绍之前的处理 直接操作 dom 节点，react vue angular 虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成正真的。 单页面应用搭建 react 开发环境">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://crawler-fs.intsig.net/camfs/download?filename=10005_29d15ccca128b12251a4586a47524d28_0.gif">
+<meta property="og:updated_time" content="2019-02-26T05:34:47.344Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="华禹的博客"> 
+<meta name="twitter:title" content="react 基础知识">
+<meta name="twitter:description" content="react 介绍之前的处理 直接操作 dom 节点，react vue angular 虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成正真的。 单页面应用搭建 react 开发环境">
+<meta name="twitter:image" content="http://crawler-fs.intsig.net/camfs/download?filename=10005_29d15ccca128b12251a4586a47524d28_0.gif"> 
     <link rel="alternative" href="/atom.xml" title="华禹的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -184,61 +191,249 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-htmlReact" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <header class="article-header">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/25/deployment/" class="archive-article-date">
-  	<time datetime="2019-02-25T05:15:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-25</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/25/deployment/">Project deployment</a>
+    <h1 class="article-title" itemprop="name">
+      react 基础知识
     </h1>
   
+  <a href="/2019/02/18/htmlReact/" class="archive-article-date">
+  	<time datetime="2019-02-18T12:56:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-18</time>
+</a>  
+      <span class="archive-article-date">
+        阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
+      
+    </header>
 
-        <div class="article-info info-on-right">
-          
+    
+    <div class="article-entry" itemprop="articleBody">
+       <p><img src="http://crawler-fs.intsig.net/camfs/download?filename=10005_29d15ccca128b12251a4586a47524d28_0.gif" width="300" hegiht="100"><br><!-- ![avatar](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550592545673&di=30f8a9034c6a4557eabdeb3640683c28&imgtype=0&src=http%3A%2F%2Fs1.51cto.com%2Fwyfs02%2FM01%2F88%2F7F%2FwKiom1f55HCSS-DrAACSkyHme8o914.png-wh_651x-s_1436211364.png) --></p>
+<h2 id="react-介绍"><a href="#react-介绍" class="headerlink" title="react 介绍"></a>react 介绍</h2><p>之前的处理 直接操作 dom 节点，react vue angular 虚拟 dom ，只要数据变虚拟 dom 结构就改变，最后将虚拟的 dom 转化成正真的。</p>
+<h2 id="单页面应用"><a href="#单页面应用" class="headerlink" title="单页面应用"></a>单页面应用</h2><h3 id="搭建-react-开发环境"><a href="#搭建-react-开发环境" class="headerlink" title="搭建 react 开发环境"></a>搭建 react 开发环境</h3><a id="more"></a>
+<p>利用官方提供的脚手架 <code>create-react-app</code></p>
+<ul>
+<li>使用 npm 全局安装 <code>create-react-app</code>，<code>npm i create-react-app -g</code>,安装好之后就可以使用 create-react-app 命令了。</li>
+<li>使用 create-react-app 创建一个 react 项目 <code>npm i create-react-app react-hello</code></li>
+<li>安装好了之后 <code>cd react-hello &amp;&amp; npm start</code>,实现了使用 webpack 将 src 下的源码打包到 localhost:3000 的服务器下的 static/js/bundle.js 内。弹出的页面就是访问了该服务器下的 index.html(该 html 的模板就是项目下 public 内的 index.html)</li>
+</ul>
+<h3 id="react-的-hello-world"><a href="#react-的-hello-world" class="headerlink" title="react 的 hello world"></a>react 的 hello world</h3><p>修改 src 下的内容，写出自己的 hello world</p>
+<ul>
+<li>删除一些没有用的文件 logo.svg index.css app.test.js App.css</li>
+<li>打开 index.js,删除 <code>import &#39;./index.css&#39;;</code></li>
+<li>打开 App.js,删除 <code>import logo from &#39;./logo.svg&#39;;</code> <code>import &#39;./App.css&#39;;</code> 并且把 return 内的所有内容删除,替换成 <code>&lt;div&gt;hello world&lt;/div&gt;</code></li>
+</ul>
+<h3 id="react-内的-jsx-语法"><a href="#react-内的-jsx-语法" class="headerlink" title="react 内的 jsx 语法"></a>react 内的 jsx 语法</h3><p>jsx 语法：js 内部写 html。只有导入了 react 这个包，react 项目内才能写 jsx 语法。<br>使用 ReactDOM.render 将虚拟的 reactDom 加载到真实的 dom 节点上。<br>我们把 react 项目中的 js 称作为 组件。组件内部默认有个 render 方法 ,该方法内写 return，返回的内容就是该组件的 html 结构。<br>jsx 元素只能被包裹在一个闭合标签内，组件的 return 只能返回一个标签<br>react 组件内的 render 方法是默认就执行的，想要在 jsx 内使用 js 需要将 js 使用大括号包裹<br>jsx 内使用 style 属性 <code>style = 双大括号width:&#39;200px&#39;</code><br>jsx 的属性不能写成关键字 class -&gt; className for -&gt; htmlFor</p>
+<h3 id="组件的样式"><a href="#组件的样式" class="headerlink" title="组件的样式"></a>组件的样式</h3><ol>
+<li>行内样式，但是必须写成 <code>style = 双大括号width:&#39;200px&#39;</code></li>
+<li>外链样式 直接新建 css 文件，当做模块导入即可 <code>import &#39;路径需要写后缀名&#39;</code></li>
+</ol>
+<p><strong>我们引入的样式都是全局的所以要注意不要和其他的组件冲突</strong><br><strong>一个组件最好对应一个组件的样式文件</strong></p>
+<h3 id="react-图片处理"><a href="#react-图片处理" class="headerlink" title="react 图片处理"></a>react 图片处理</h3><p>网上的图片可以直接使用<br>如何引入本地的图片 将图片当做模块导入到对应的组件内 <code>import pic from &#39;./img/1.jpeg&#39;</code></p>
+<h3 id="react-的-state-状态"><a href="#react-的-state-状态" class="headerlink" title="react 的 state(状态)"></a>react 的 state(状态)</h3><p>react 的事件绑定，都是绑定在标签内部的 <code>&lt;button onClick={fun}&gt;+&lt;/button&gt;</code> fun 是方法名,<br>通常 react 的事件函数定义成该组件的类的一个方法,那么绑定事件就要写成 <code>&lt;button onClick={this.fun}&gt;+&lt;/button&gt;</code><br><strong>我们在组件的函数内想要使用组件内的 this 需要将函数定义成箭头函数</strong></p>
+<p>只要是页面发生改变就要使用状态控制,例如我们实现一个点击按钮数字加一，需要先在组件内部定义一个状态</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">state = &#123;</span><br><span class="line">  num: <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在 jsx 内部使用这个状态， <code>&lt;span&gt;{this.state.num}&lt;/span&gt;</code></p>
+<p>想要修改 state 必须使用 setState，还要注意组件的 state 不能直接修改。要实现 +1 写成</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">  num: <span class="keyword">this</span>.state.num + <span class="number">1</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>注意：不能写成 this.state.num++ 因为 ++ 相当于重新赋值，就是直接修改了</strong><br><strong>setState 方法是异步的方法，该方法执行是需要一点点时间的，但是不影响其他语句的执行。所以直接在 setSate 方法后面输出 state 还是修改之前的 state。</strong><br><strong><em>当修改了 state 时 render 会重新执行,只会重新渲染跟改变的 state 相关的 html</em></strong><br>组件内部事件如何传参<br>假如我定义了一个函数是 changeModal，该函数内有一个参数，想给组件的某个 html 绑定事件,调用的时候传参，不能写成 <code>onClick={this.changeModal(true)}</code>，要写成 <code>onClick={() =&gt; {this.changeModal(true)}}</code>，因为 onClick 的属性值必须是一个函数，而该函数内部想要使用 this 的话必须定义成箭头函数。</p>
+<h3 id="react-组件中的-setInterval"><a href="#react-组件中的-setInterval" class="headerlink" title="react 组件中的 setInterval"></a>react 组件中的 setInterval</h3><p>当我们需要在页面刷新的时候，使用 setInterval 更新 state，</p>
+<h3 id="react-组件的-props-类型检查以及设置-props-的默认值"><a href="#react-组件的-props-类型检查以及设置-props-的默认值" class="headerlink" title="react 组件的 props 类型检查以及设置 props 的默认值"></a>react 组件的 props 类型检查以及设置 props 的默认值</h3><h4 id="类型检测"><a href="#类型检测" class="headerlink" title="类型检测"></a>类型检测</h4><ol>
+<li>引入 PropTypes <code>import PropTypes from &#39;prop-types&#39;</code></li>
+<li><p>在 class 类的外面设置 该组件的的 props 类型检测，比如组件名为 Card</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Card.propTypes = &#123;</span><br><span class="line">  <span class="comment">// 将该组件的 cardWidth 的属性值规定为字符串，也就是当父组件使用该组件的传 props 时，该属性的属性值需要是字符串类型</span></span><br><span class="line">  cardWidth: PropTypes.string,</span><br><span class="line">  <span class="comment">// imgSrc 属性的值是字符串而且是必须的属性，也就是说父组件使用子组件的时候必须传递该属性</span></span><br><span class="line">  imgSrc: PropTypes.string.isRequired</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>详细验证写法参考<a href="https://react.docschina.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">链接</a></p>
+</li>
+</ol>
+<h4 id="设置默认值"><a href="#设置默认值" class="headerlink" title="设置默认值"></a>设置默认值</h4><p>直接在 class 外，对组件的 defaultProps 进行设置，该设置不需要依赖 prop-types 包的支持</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Card.defaultProps = &#123;</span><br><span class="line">  title: <span class="string">'标题'</span>,</span><br><span class="line">  pra: <span class="string">'段落'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="react-表单"><a href="#react-表单" class="headerlink" title="react 表单"></a>react 表单</h3><h4 id="受控组件-提倡"><a href="#受控组件-提倡" class="headerlink" title="受控组件(提倡)"></a>受控组件(提倡)</h4><ol>
+<li>将表单的 value 设置成 state</li>
+<li><p>必须使用 onChange 事件修改 state<br>如何使用 onChange 事件修改 state</p>
+<ul>
+<li>利用事件函数的事件对象获取输入的 value 值 <code>event.target.value</code></li>
+<li>使用 setState 修改 <code>this.setState({val:event.target.value})</code></li>
+</ul>
+</li>
+<li><p>满足以上两个条件你的表单就变成了受控组件<br><strong><code>input</code> <code>textarea</code> <code>select</code> 这三个标签都可以使用上面的做法，改成 react 的受控组件</strong></p>
+</li>
+</ol>
+<h4 id="非受控组件"><a href="#非受控组件" class="headerlink" title="非受控组件"></a>非受控组件</h4><p>直接获取真实的 dom 节点获取 value 值即可<br>react 中如何获取真实的 dom 节点？</p>
+<ol>
+<li>使用原生 js <code>document.querySelector</code> 等方法获取</li>
+<li>使用 react 提供的 refs 获取<br>refs 如何使用<ul>
+<li>给元素的添加一个 ref 属性，属性值设为一个函数(箭头函数)</li>
+<li>给该函数添加一个参数,函数内部将该函数赋值给 this 的一个属性(this.inp =inp),那么该属性的属性值就是 真实的 dom 节点。</li>
+</ul>
+</li>
+</ol>
+<h3 id="react-的状态提升"><a href="#react-的状态提升" class="headerlink" title="react 的状态提升"></a>react 的状态提升</h3><ol>
+<li>何时使用？<br>当两个不相关的组件想要相互控制彼此的 state 的时候</li>
+<li>怎么使用？<ul>
+<li>将要被修改的 state 写到两个组件的公共祖先组件中</li>
+<li>将祖先组件中的 state 当做 props 传递给需要的子组件</li>
+</ul>
+</li>
+<li>为什么？<br>因为子组件可以修改父组件的 state ，进而也就改变的 另外一个组件的 props。</li>
+</ol>
+<h4 id="子组件如何修改父组件的-state"><a href="#子组件如何修改父组件的-state" class="headerlink" title="子组件如何修改父组件的 state"></a>子组件如何修改父组件的 state</h4><ul>
+<li>在父组件中定义修改 state 的方法</li>
+<li>将该方法传递给需要修改的子组件</li>
+</ul>
+<h3 id="react-路由-页面跳转-react-router"><a href="#react-路由-页面跳转-react-router" class="headerlink" title="react 路由(页面跳转) react-router"></a>react 路由(页面跳转) react-router</h3><p>react 项目是单页面应用，要实现页面提转的话需要依赖 react 的 react-router-dom 包来实现,官网参考链接 <a href="https://reacttraining.com/react-router/web/guides/quick-start" target="_blank" rel="noopener">react-router</a></p>
+<ul>
+<li>在项目下安装 react-router-dom <code>npm i react-router-dom</code></li>
+<li>在 App.js 内引入 BrowserRouter 。<code>import { BroswerRouter } from &#39;react-router-dom</code><br>BroswerRouter 是 react-router-dom 包内的一个 react 组件，该组件的作用是</li>
+</ul>
+<h3 id="react-项目部署"><a href="#react-项目部署" class="headerlink" title="react 项目部署"></a>react 项目部署</h3><h5 id="部署到-github-gh-pages-分支"><a href="#部署到-github-gh-pages-分支" class="headerlink" title="部署到 github gh-pages 分支"></a>部署到 github gh-pages 分支</h5><ul>
+<li>先确保本地项目能启动并且没有什么问题</li>
+<li><p>更改 package.json 内容，添加 homepage</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"homepage":"https://yourname.github.io/yourapp",</span><br><span class="line">"scripts":&#123;</span><br><span class="line">  "deploy": "gh-pages -d build"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>本地安装 gh-pages 包 <code>npm i gh-pages -D</code></p>
+</li>
+<li>本地执行 <code>npm run build</code> 打包 react 项目到 build 文件夹</li>
+<li>将本地的文件夹初始化为 git 仓库(不添加 README.md)，并且上传</li>
+<li>执行 <code>npm run deploy</code> 将打包好的项目部署到 gh-pages 分之</li>
+<li>查看页面即可访问项目</li>
+<li>如果要更新项目的话 先更新本地的服务器代码，然后<code>npm run build</code>打包，打包完成之后，先上传到 master 分支，然后使用 <code>npm run deploy</code> 更新 gh-pahes 分支</li>
+</ul>
+<h5 id="部署到-netlify-免费服务器"><a href="#部署到-netlify-免费服务器" class="headerlink" title="部署到 netlify 免费服务器"></a>部署到 netlify 免费服务器</h5><ul>
+<li>先确保本地项目能启动并且没有什么问题</li>
+<li>将本地的文件夹初始化为 git 仓库(不添加 README.md)，并且上传</li>
+<li>到 netlify 网站，选择 git 的某个仓库</li>
+</ul>
+<h6 id="react-redux-demo-参考地址"><a href="#react-redux-demo-参考地址" class="headerlink" title="react-redux-demo 参考地址"></a>react-redux-demo 参考地址</h6><p><a href="https://www.yuque.com/sunnyzz/react-redux" target="_blank" rel="noopener">项目文档参考地址</a></p>
+<h3 id="react-的-redux"><a href="#react-的-redux" class="headerlink" title="react 的 redux"></a>react 的 redux</h3><ol>
+<li>创建 store<ul>
+<li>安装 redux <code>npm i redux</code></li>
+<li>在 src 下新建 store/index.js 存储 store</li>
+</ul>
+</li>
+</ol>
+<h4 id="redux-流程"><a href="#redux-流程" class="headerlink" title="redux 流程"></a>redux 流程</h4><ol>
+<li>创建 store createStore(reducer) reducer 怎么写</li>
+<li>获取 store 内容 Provider 组件 —&gt; connect 方法 mstp</li>
+<li>修改 store dispatch —&gt; action —&gt; reducer</li>
+</ol>
+<p><strong>优化 把组件内的 action 以及异步请求 都封装到 action 创建函数内 mdtp ，redux-thunk</strong></p>
+<!-- <img src="/2019/02/18/htmlReact/weixin.jpg" title="This is an 第一篇博客">
+<p>  <img src="/第一篇博客/weixin.jpg" alt="avatar"> –&gt;</p>
+<!-- ![avatar](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550592545673&di=30f8a9034c6a4557eabdeb3640683c28&imgtype=0&src=http%3A%2F%2Fs1.51cto.com%2Fwyfs02%2FM01%2F88%2F7F%2FwKiom1f55HCSS-DrAACSkyHme8o914.png-wh_651x-s_1436211364.png) -->
+  
+      <div class="page-reward">
+        <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">
+                    <i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i>
+                  </p>
+                  <div class="reward-box">
+                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+
+    <div class="article-info article-info-index">
+       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目部署</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">react 基础</a>
         		</li>
       		
 		</ul>
 	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+ 
+  
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+ 
+<nav id="article-nav">
+  
+    <a href="/2019/02/19/git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          shell 命令 和 git 基础操作
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/02/18/rotation/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Rotation chart</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
+  <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>       <div id="gitment-ctn"></div>
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css" />
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<!-- <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script> -->
 
-    
-
+<script>
+  var gitment = new Gitment({
+    // id: 'http://yoursite.com/2019/02/18/htmlReact/',
+    id: 'Mon Feb 18 2019 20:56:12 GMT+0800',
+    // id: '{{ page.date }}',
+    owner: 'Animye',
+    // owner: '{{ theme.gitment.github_user }}',
+    repo: 'Animye.github.io',
+    // repo: '{{ theme.gitment.github_repo }}',
+    oauth: {
+      client_id: 'c8096215035deb2e7daa',
+      client_secret: 'a58d752b35cb387ee4ce93fbaa167aed8518eeda'
+    }
+  })
+  gitment.render('gitment-ctn')
+</script>
+<!-- var gitment = new {{CommentsClass}}({
+  id: '{{ page.date }}',
+  owner: '{{ theme.gitment.github_user }}',
+  repo: '{{ theme.gitment.github_repo }}', -->
+  
 
           </div>
         </div>
@@ -267,9 +462,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
