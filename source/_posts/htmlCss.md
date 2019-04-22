@@ -9,7 +9,7 @@ tags:
 
   <!-- more -->
 
-# 容易忘
+## 容易忘
 
 - visibility：hidden 隐藏
 - visibility：visible 显示
@@ -27,7 +27,7 @@ tags:
 - :focus 获取焦点（如:hover 这类叫做伪类选择器）权重 10
 - box-shadow:水平，垂直，模糊（越大越淡），阴影大小，颜色，inset 阴影
 
-# 单文本超出显示三个点
+## 单文本超出显示三个点
 
 ```js
 <style>white-space:nowrap; overflow:hidden; text-overflow:ellipsis</style>
@@ -38,11 +38,42 @@ tags:
 3. 溢出隐藏 oh
 4. 设置文本超出显示三个点
 
-# 媒体查询
+## 媒体查询
 
 ```js
 @media screen and(min-width:500px) and (max-width:700px){
 
 }
 //指的是500到700
+```
+
+## flex 布局
+
+### 容器的相关属性
+
+```js
+justify-content(项目在主轴方向上的对齐方式):center 居中
+                                        space-between 第一个最左边，最后一个在最右边，其他间距相同
+                                        space-around 左右一倍间距，中间两倍间距
+                                        flex-start  全靠左
+                                        flex-end 全靠右
+aligh-items(项目在副轴上的对齐方式):center 居中
+                                stretch
+                                baseline
+flex-direction(规定主轴的方向):row 横
+                             row-reverse 横向反向
+                             column 竖向
+                             column-reverse 竖向反向
+flex-wrap(项目在主轴方向排不开可以使用该属性换行): wrap 换行 nowrap 不换行
+align-content(多轴线是副轴方向上的对齐方式)
+```
+
+### 项目相关的属性
+
+```js
+order 规定项目的排列顺序，值是数字（默认0），数字越大位置约靠后
+flex-grow 规定项目的放大比例，默认是0，即存在剩余空间也不放大，设置为1，即占满剩余空间
+flex-shrink 定义了项目的缩小比例，默认为1，即如果空间不足该项目缩小，设置为0，即项目不会缩小
+flex-basis
+flex-self 单个项目的对齐方式，属性允许单个项目在副轴上有与其他项目不一样的对齐方式，可覆盖aligh-items属性
 ```
