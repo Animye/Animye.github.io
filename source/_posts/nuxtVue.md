@@ -43,3 +43,8 @@ tags:
 - fetch 函数 第一个参数是 `context`,只在页面组件中（即在 pages 文件夹下的组件）
 - `context` 对象下都有哪些属性
   [参考地址](https://zh.nuxtjs.org/api/#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%AF%B9%E8%B1%A1)
+
+## 传参方式
+
+1. 写在地址后面？后
+   scoped 样式变成局部的 给当前组件的所有标签都加上 data-v-xxx 属性 样式写成 H3[data-v-xxx]

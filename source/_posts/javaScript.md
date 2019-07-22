@@ -55,6 +55,21 @@ return 有一个额外的意思，就是当做下一次遍历数组的初始值
 每一次reduce内部的函数执行完毕后必须有返回值，原数组不变，返回新的值
 ```
 
+- 已知一个数组随机
+
+```js
+const arr = [1, 2, 3, 4, 5]
+const newArr = []
+for (let index = 0; index < arr.length; index++) {
+  const num = Math.floor(Math.random() * arr.length)
+  const val = arr[num]
+  newArr.push(val)
+  index--
+  arr.splice(num, 1)
+}
+console.log(newArr)
+```
+
 #### String
 
 ##### 字符串的方法
@@ -67,3 +82,23 @@ return 有一个额外的意思，就是当做下一次遍历数组的初始值
    **要被替换的字符串可以写成正则表达式**
    **正则表达式//后面可以添加关键字，g 全局匹配，i 字母不区分大小写**
 6. match() 获取字符串中符合正则表达式的所有项（数组形式） 用法：Match(regexp)
+
+#### 数学对象
+
+1. Math.floor(数) 下舍 把括号内的数字进行下舍并返回结果，原数字不会改变
+2. Math.ceil(数) 上进
+3. Math.round(数) 四舍五入
+4. Math.random() 0-1 的随机数
+5. Math.max(1,2,3,...) 查找最大值
+6. Math.min 查找最小值
+7. Math.PI
+
+#### 正则表达式
+
+##### 正则表达式的规则
+
+```js
+[0-9] 一位数字
+[a-z] 一位小写字母
+[A-Z] 一位大写字母
+```
