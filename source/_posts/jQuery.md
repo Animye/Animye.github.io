@@ -9,7 +9,7 @@ tags:
 
 <!-- more -->
 
-# jQuery 里面的方法
+## jQuery 里面的方法
 
 - `siblings(可以放选择器)` 查找同一级别的兄弟元素，不限个数
 - `parent()` 查找父级元素（即向上）
