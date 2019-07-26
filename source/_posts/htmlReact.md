@@ -211,6 +211,6 @@ react 项目是单页面应用，要实现页面提转的话需要依赖 react �
 
 <!-- {% asset_img weixin.jpg This is an 第一篇博客 %}
 
-  ![avatar](/第一篇博客/weixin.jpg) -->
+![avatar](/第一篇博客/weixin.jpg) -->
 
 <!-- ![avatar](https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550592545673&di=30f8a9034c6a4557eabdeb3640683c28&imgtype=0&src=http%3A%2F%2Fs1.51cto.com%2Fwyfs02%2FM01%2F88%2F7F%2FwKiom1f55HCSS-DrAACSkyHme8o914.png-wh_651x-s_1436211364.png) -->

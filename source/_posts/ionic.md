@@ -109,3 +109,10 @@ ionic cordova platform add ios
 ionic cordova resources ios//正常执行完上面两句，资源文件都已经被更新，如果没有更新则执行本行命令
 ionic cordova build ios
 ```
+
+StatusBar.styleDefault 状态栏默认样式，也就是电池信号黑色；
+StatusBar.styleLightContent 状态栏内容浅色，貌似就是白色，适合深色背景；
+StatusBar.styleBlackTranslucent 状态栏黑色半透明，我测了下，跟上面一样的效果，电池时间都是白色的，适合深色背景；
+StatusBar.styleBlackOpaque 状态栏黑色不透明。我测了下，还是白色的，跟上面一样，适合深色背景；
+StatusBar.hide 状态栏隐藏；
+StatusBar.show 状态栏显示；
