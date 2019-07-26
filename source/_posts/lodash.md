@@ -43,3 +43,5 @@ import { add } from 'lodash/fp';
 const addOne = add(1);
 _.map([1, 2, 3], addOne);
 ```
+
+[参考资料](https://www.cnblogs.com/e0yu/p/10843420.html)
