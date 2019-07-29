@@ -158,3 +158,14 @@ tags:
 - 在 index.html 引入打包好的 dist 下面的 bundle.js
 
 **要确保打包的入口文件是 index.js,也就是说 src 下必须有 index.js**
+
+## 使用 iTerm2 替代 Mac 自带 Terminal 终端
+
+先把 bash 切换成 zsh
+chsh -s /bin/zsh
+先把 zsh 切换成 bash
+chsh -s /bin/bash
+command+d:垂直分割；
+command+shift+d:水平分割
+使用快捷键 shift+command+h,快速显示出我复制过的历史记录，你可以快速选择使用。
+command+enter,可以快速实现全屏与正常窗口大小的切换，非常方便。
