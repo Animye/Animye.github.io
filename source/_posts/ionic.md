@@ -116,3 +116,24 @@ StatusBar.styleBlackTranslucent 状态栏黑色半透明，我测了下，跟上
 StatusBar.styleBlackOpaque 状态栏黑色不透明。我测了下，还是白色的，跟上面一样，适合深色背景；
 StatusBar.hide 状态栏隐藏；
 StatusBar.show 状态栏显示；
+
+### 跨域问题
+
+[参考文档](https://www.jianshu.com/p/ad27b8dcd098)
+
+- 修改 ionic.config.json(旧版本 Ionic CLI 是 ionic.project)：
+
+```js
+{
+  "name": "proxy-example",
+  "app_id": "",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "http://cors.api.com/api"
+    }
+  ]
+}
+
+
+```
