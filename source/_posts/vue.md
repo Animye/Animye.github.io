@@ -21,6 +21,19 @@ tags:
 
 #### 安装环境
 
+使用官方提供的脚手架 vue-cli ,版本是 2.x
+
+- `npm install -g vue-cli`
+- `vue init webpack my-project`
+- 配置
+  Project name :项目名称 ，如果不需要更改直接回车就可以了。注意：这里不能使用大写
+  Project description:项目描述，默认为 A Vue.js project,直接回车，不用编写。
+  Author：作者，如果你有配置 git 的作者，他会读取。
+  Install vue-router? 是否安装 vue 的路由插件，我们这里需要安装，所以选择 y
+  Use ESLint to lint your code? 是否用 ESLint 来限制你的代码错误和风格。我们这里不需要输入 n，如果你是大型团队开发，最好是进行配
+  setup unit tests with Karma + Mocha? 是否需要安装单元测试工具 Karma+Mocha，我们这里不需要，所以输入 n。
+  Setup e2e tests with Nightwatch?是否安装 e2e 来进行用户行为模拟测试，我们这里不需要，所以输入 n
+
 使用官方提供的脚手架 vue-cli ,版本是 3.x
 
 - 使用命名 `npm i -g @vue/cli` 全局安装一个 vue 命令
@@ -425,3 +438,9 @@ store 的计算属性, vue 组件内获取方式 `$store.getters`
 
 - `<Dem> - did you register the component correctly?`
 - `Failed to compile.` 编译失败 `Module not found: Error: Can't resolve './components/Dem' in 'D:\digitalcity授课\2019\1903\1903\vue-demo\src'`
+
+使用 sass
+`npm install node-sass --save-dev`
+`npm install sass-loader --save-dev`
+[sass](https://www.cnblogs.com/gudi/p/8075631.html)
+[scope](https://segmentfault.com/a/1190000015932467)

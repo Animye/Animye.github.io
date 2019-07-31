@@ -13,6 +13,15 @@ tags:
 3. JavaScript 实现了网页的行为
    <!-- more -->
 
+## 内存空间
+
+```js
+var a = 10 // 变量对象
+var b = { a: 10 } // 变量b存在于变量对象中，{a: 10} 作为对象存在于堆内存中
+```
+
+![avatar](https://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imagemogr2/auto-orient)
+
 ## 变量
 
 - 分两种一种是基本类型，一种是引用类型
