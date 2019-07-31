@@ -444,3 +444,27 @@ store 的计算属性, vue 组件内获取方式 `$store.getters`
 `npm install sass-loader --save-dev`
 [sass](https://www.cnblogs.com/gudi/p/8075631.html)
 [scope](https://segmentfault.com/a/1190000015932467)
+
+#### vue 跨域
+
+- vue cli3
+
+- 建立 vue.config.js 文件
+
+```js
+module.exports = {
+  devServer: {
+    // 配置代理服务器
+    proxy: {
+      '/api': {
+        target: 'https://www.wanandroid.com',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    }
+  }
+}
+```
