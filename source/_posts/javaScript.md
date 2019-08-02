@@ -53,6 +53,8 @@ var b = { a: 10 } // 变量b存在于变量对象中，{a: 10} 作为对象存�
 
 ##### 数组的方法
 
+**由于空位的处理规则非常不统一，所以建议避免出现空位。**
+
 1. push(要添加的元素) 向数组内部的最后添加的元素，原来的数组不变，该方法返回新数组的长度
 2. unshift() 向数组前面添加元素，原来的数组不变，该方法返回新数组的长度
 3. concat(另一个数组) 将两个数组拼接，原来的数组不变，并返回新得到的数组
@@ -73,9 +75,28 @@ var b = { a: 10 } // 变量b存在于变量对象中，{a: 10} 作为对象存�
     **数组 find 方法找到某一个对象，和数组内的某一个对象指向的是同一个地址，我们更改了 find 方法找到的对象，就相当于修改了数组内的对象，也就相当于修改了数组，那么数据就发生了变化，页面因此改变**
 14. findIndex() 查找的是下标，查不到返回-1，跟 find 用法一样
 15. every() 检测所有元素是否符合条件，符合条件返回 true，不符合返回 false，通常用来查询数组中是否都是同一个元素
-16. include() 使用该方法替换 indexOf
+16. includes() 使用该方法替换 indexOf ,方法返回一个布尔值，表示某个数组是否包含给定的值，与字符串的 includes 方法类似。ES2016 引入了该方法。
 17. sort() 给数组排序 例如：xxx.sort(function(a,b){return a-b（正序）/b-a（倒序）}) a 和 b 代表的是数组相邻的两项 a-b 让相邻两项进行数学运算，如果小于 b 从小到大，反之从大到小， 原数组改变，返回值就是新数组
-18. reduce()
+18. 数组实例的 entries()，keys() 和 values()
+    keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。
+19. fill(),fill 方法使用给定值，填充一个数组。
+    `['a', 'b', 'c'].fill(7)// [7, 7, 7]`
+20. copyWithin(),在当前数组内部，将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组。也就是说，使用这个方法，会修改当前数组。
+    `Array.prototype.copyWithin(target, start = 0, end = this.length)`
+    它接受三个参数。
+    -target（必需）：从该位置开始替换数据。如果为负值，表示倒数。
+    -start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示从末尾开始计算。
+    -end（可选）：到该位置前停止读取数据，默认等于数组长度。如果为负值，表示从末尾开始计算。
+    这三个参数都应该是数值，如果不是，会自动转为数值。
+21. Array.from(),Array.from 方法用于将两类对象转为真正的数组
+22. Array.of(),Array.of 方法用于将一组值，转换为数组。
+    `Array.of(3, 11, 8) // [3,11,8]`
+    `Array.of(3) // [3]`
+    `Array.of(3).length // 1`
+23. 数组实例的 flat()，flatMap(),
+    数组的成员有时还是数组，Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。
+    flatMap()方法对原数组的每个成员执行一个函数（相当于执行 Array.prototype.map()），然后对返回值组成的数组执行 flat()方法。该方法返回一个新数组，不改变原数组。
+24. reduce()
 
 ```js
 xxx.reduce(function(result,ele,ind,array){rerurn xxx},0)
@@ -102,6 +123,45 @@ for (let index = 0; index < arr.length; index++) {
   arr.splice(num, 1)
 }
 console.log(newArr)
+```
+
+- 已知一个数组去重
+
+```js
+function removal(arr) {
+  newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    if (newArr.indexOf(arr[i]) == -1) {
+      newArr.push(arr[i])
+    }
+  }
+  return newArr
+}
+const arr = [1, 1, 1, 3, 4, 53, 636, 6, 5, 5]
+console.log(removal(arr))
+// function arr(array) {
+//   return array.reduce((m, n) => {
+//     if (m.indexOf(n) == -1) {
+//       m.push(n)
+//     }
+
+//     return m
+//   }, [])
+// }
+// const array = [1, 1, 1, 1, 1, 1, 2, 2, 3, 4, 5, 5, 6, 7]
+
+//es6 set 方法
+1.
+const array = [1, 1, 1, 1, 1, 1, 2, 2, 3, 4, 5, 5, 6, 7]
+[...new Set(array)]
+
+console.log([...new Set(array)])
+2.
+function dedupe(array) {
+  return Array.from(new Set(array));
+}
+
+dedupe([1, 1, 2, 3])
 ```
 
 #### String
@@ -136,3 +196,19 @@ console.log(newArr)
 [a-z] 一位小写字母
 [A-Z] 一位大写字母
 ```
+
+#### 数据结构的栈和队列操作
+
+[参考资料](https://www.cnblogs.com/anniey/p/7127872.html)
+
+### 栈
+
+执行上下文就是使用栈
+
+- 栈是一种先进后出的数据结构，比如往筒子里放入羽毛球，想要取出来，必须从最后一个开始。
+  数组方法 push()--入栈和 pop()--出栈
+
+### 队列
+
+- 队列是一种先进先出的数据结构，类似排队 办理业务，先到的先办理，后到的后办理。
+  `JS为数组提供了方法可以实现队列功能， 入队unshift()、 出队pop()；`
