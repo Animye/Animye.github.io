@@ -162,11 +162,53 @@ function dedupe(array) {
 }
 
 dedupe([1, 1, 2, 3])
+
+reduce 用法  用list生成对象
+  const list = [
+        {
+          name: '谈话通知书'
+        },
+        {
+          name: '被调查人权利义务告知书'
+        },
+        {
+          name: '谈话笔录'
+        }
+      ]
+      function generatelist(list, frefix) {
+        return list.reduce((a, b, c, d) => {
+          const key = frefix + `${c}`
+          const content = {
+            width: 300,
+            height: 200,
+            shape: 'shape',
+            code: key,
+            path: 'ssss',
+            text: b.name,
+            keyPoint: [0, 0],
+            lines:
+              c + 1 < d.length
+                ? [
+                    {
+                      path: 'y30|x-150|y27',
+                      hasArrow: true,
+                      next: frefix + `${c + 1}`
+                    }
+                  ]
+                : []
+          }
+          a[key] = content
+          return a
+        }, {})
+      }
+      generatelist(list, 99)
 ```
 
 #### String
 
 ##### 字符串的方法
+
+字符串对象共有 4 个方法，可以使用正则表达式：match()、replace()、search()和 split()。
 
 1. spilt(a) 将字符串以 a 分割拆分成数组
 2. charAt(数字) 获取字符串对应数字下标的字符
@@ -176,6 +218,22 @@ dedupe([1, 1, 2, 3])
    **要被替换的字符串可以写成正则表达式**
    **正则表达式//后面可以添加关键字，g 全局匹配，i 字母不区分大小写**
 6. match() 获取字符串中符合正则表达式的所有项（数组形式） 用法：Match(regexp)
+7. 实例方法：includes(), startsWith(), endsWith()
+   -includes()：返回布尔值，表示是否找到了参数字符串。
+   -startsWith()：返回布尔值，表示参数字符串是否在原字符串的头部。
+   -endsWith()：返回布尔值，表示参数字符串是否在原字符串的尾部。
+   这三个方法都支持第二个参数，表示开始搜索的位置。
+8. repeat() repeat 方法返回一个新字符串，表示将原字符串重复 n 次。
+   参数如果是小数，会被取整。
+   如果 repeat 的参数是负数或者 Infinity，会报错。
+   但是，如果参数是 0 到-1 之间的小数，则等同于 0，这是因为会先进行取整运算。0 到-1 之间的小数，取整以后等于-0，repeat 视同为 0。
+   参数 NaN 等同于 0。
+   如果 repeat 的参数是字符串，则会先转换成数字。
+9. 实例方法：padStart()，padEnd() ;ES2017 引入了字符串补全长度的功能。如果某个字符串不够指定长度，会在头部或尾部补全。padStart()用于头部补全，padEnd()用于尾部补全。
+   padStart()和 padEnd()一共接受两个参数，第一个参数是字符串补全生效的最大长度，第二个参数是用来补全的字符串。
+10. 实例方法：trimStart()，trimEnd()
+    ES2019 对字符串实例新增了 trimStart()和 trimEnd()这两个方法。它们的行为与 trim()一致，trimStart()消除字符串头部的空格，trimEnd()消除尾部的空格。它们返回的都是新字符串，不会修改原始字符串。
+11. matchAll() matchAll()方法返回一个正则表达式在当前字符串的所有匹配
 
 #### 数学对象
 
@@ -186,6 +244,11 @@ dedupe([1, 1, 2, 3])
 5. Math.max(1,2,3,...) 查找最大值
 6. Math.min 查找最小值
 7. Math.PI
+8. Number.isInteger() Number.isInteger()用来判断一个数值是否为整数。
+9. Math.trunc() Math.trunc 方法用于去除一个数的小数部分，返回整数部分。
+   对于非数值，Math.trunc 内部使用 Number 方法将其先转为数值。
+   对于空值和无法截取整数的值，返回 NaN。
+10. Math.sign() 方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。 -参数为正数，返回+1； -参数为负数，返回-1； -参数为 0，返回 0； -参数为-0，返回-0; -其他值，返回 NaN。
 
 #### 正则表达式
 
@@ -212,3 +275,9 @@ dedupe([1, 1, 2, 3])
 
 - 队列是一种先进先出的数据结构，类似排队 办理业务，先到的先办理，后到的后办理。
   `JS为数组提供了方法可以实现队列功能， 入队unshift()、 出队pop()；`
+
+### 闭包的形成需要两个条件
+
+- 在函数内部创建新的函数
+
+- 新的函数在执行时，访问了函数的变量对象
