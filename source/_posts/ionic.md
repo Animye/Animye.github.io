@@ -137,3 +137,38 @@ StatusBar.show 状态栏显示；
 
 
 ```
+
+### mac path 设置
+
+```js
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home
+PATH=$JAVA_HOME/bin:$PATH:.
+CLASSPATH=$JAVA_HOME/lib/tools.jar:$JAVA_HOME/lib/dt.jar:.
+export JAVA_HOME
+export PATH
+export CLASSPATH
+
+
+
+
+export ANDROID_HOME=/Users/mac/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+export ANT_HOME=/Applications/apache-ant-1.10.6
+export PATH=$ANT_HOME/bin:$PATH
+
+
+
+GRADLE_HOME=/Users/mac/gradle-4.1
+export GRADLE_HOME
+export PATH=$PATH:$GRADLE_HOME/bin
+
+
+export PATH=${PATH}:/usr/local/mysql-8.0.16-macos10.14-x86_64/bin:$PATH
+
+
+export PUB_HOSTED_URL=https://pub.flutter-io.cn
+export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+export PATH=/Users/mac/flutter-1.7.8/flutter/bin:$PATH
+```

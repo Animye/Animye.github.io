@@ -11,7 +11,59 @@ tags:
 1. HTML 定义了网页的内容
 2. CSS 描述了网页的布局
 3. JavaScript 实现了网页的行为
+
    <!-- more -->
+
+## 基础
+
+1. 语句：JavaScript 程序的执行单位为行（line），也就是一行一行地执行。一般情况下，每一行就是一个语句。语句以分号结尾，一个分号就表示一个语句结束。多个语句可以写在一行内。
+2. 表达式：指一个为了得到返回值的计算式。语句和表达式的区别在于，前者主要为了进行某种操作，一般情况下不需要返回值；后者则是为了得到返回值，一定会返回一个值。凡是 JavaScript 语言中预期为值的地方，都可以使用表达式。比如，赋值语句的等号右边，预期是一个值，因此可以放置各种表达式。
+3. 标识符：指的是用来识别各种值的合法名称，最常见的标识符就是变量名，以及后面要提到的函数名。JavaScript 语言的标识符对大小写敏感，所以 a 和 A 是两个不同的标识符。
+   **JavaScript 有一些保留字，不能用作标识符：arguments、break、case、catch、class、const、continue、debugger、default、delete、do、else、enum、eval、export、extends、false、finally、for、function、if、implements、import、in、instanceof、interface、let、new、null、package、private、protected、public、return、static、super、switch、this、throw、true、try、typeof、var、void、while、with、yield。**
+4. 区块：JavaScript 使用大括号，将多个相关的语句组合在一起，称为“区块”（block）。单独使用区块并不常见，区块往往用来构成其他更复杂的语法结构，比如 for、if、while、function 等。
+5. 条件语句：JavaScript 提供 if 结构和 switch 结构，完成条件判断，即只有满足预设的条件，才会执行相应的语句。
+6. typeof 运算符
+   JavaScript 有三种方法，可以确定一个值到底是什么类型。
+   typeof 运算符
+   instanceof 运算符
+   Object.prototype.toString 方法
+7. null 和 undefined 区别是这样的：null 是一个表示“空”的对象，转为数值时为 0；undefined 是一个表示"此处无定义"的原始值，转为数值时为 NaN。
+
+```js
+下面是返回undefined的经典场景
+// 变量声明了，但没有赋值
+var i
+i // undefined
+
+// 调用函数时，应该提供的参数没有提供，该参数等于 undefined
+function f(x) {
+  return x
+}
+f() // undefined
+
+// 对象没有赋值的属性
+var o = new Object()
+o.p // undefined
+
+// 函数没有返回值时，默认返回 undefined
+function f() {}
+f() // undefined
+```
+
+8. false：转换规则是除了下面六个值被转为 false，其他值都视为 true。
+   undefined
+   null
+   false
+   0
+   NaN
+   ""或''（空字符串）
+   **布尔值往往用于程序流程的控制，注意，空数组（[]）和空对象（{}）对应的布尔值，都是 true。**
+9. 数值精度：根据国际标准 IEEE 754，JavaScript 浮点数的 64 个二进制位，从最左边开始，是这样组成的。
+   第 1 位：符号位，0 表示正数，1 表示负数
+   第 2 位到第 12 位（共 11 位）：指数部分
+   第 13 位到第 64 位（共 52 位）：小数部分（即有效数字）
+10. NAN：NaN 是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合。
+    **需要注意的是，NaN 不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于 Number，使用 typeof 运算符可以看得很清楚。NaN 不等于任何值，包括它本身。**
 
 ## 内存空间
 
@@ -235,6 +287,23 @@ reduce 用法  用list生成对象
     ES2019 对字符串实例新增了 trimStart()和 trimEnd()这两个方法。它们的行为与 trim()一致，trimStart()消除字符串头部的空格，trimEnd()消除尾部的空格。它们返回的都是新字符串，不会修改原始字符串。
 11. matchAll() matchAll()方法返回一个正则表达式在当前字符串的所有匹配
 
+##### 字符串转义
+
+- 反斜杠（\）在字符串内有特殊含义，用来表示一些特殊字符，所以又称为转义符。
+
+```js
+\0 ：null（\u0000）
+\b ：后退键（\u0008）
+\f ：换页符（\u000C）
+\n ：换行符（\u000A）
+\r ：回车键（\u000D）
+\t ：制表符（\u0009）
+\v ：垂直制表符（\u000B）
+\' ：单引号（\u0027）
+\" ：双引号（\u0022）
+\\ ：反斜杠（\u005C）
+```
+
 #### 数学对象
 
 1. Math.floor(数) 下舍 把括号内的数字进行下舍并返回结果，原数字不会改变
@@ -249,6 +318,19 @@ reduce 用法  用list生成对象
    对于非数值，Math.trunc 内部使用 Number 方法将其先转为数值。
    对于空值和无法截取整数的值，返回 NaN。
 10. Math.sign() 方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。 -参数为正数，返回+1； -参数为负数，返回-1； -参数为 0，返回 0； -参数为-0，返回-0; -其他值，返回 NaN。
+    `与数值相关的全局方法:`
+11. parseInt() parseInt 方法用于将字符串转为整数。
+    `parseInt('123') // 123`
+12. parseFloat() parseFloat 方法用于将一个字符串转为浮点数。
+13. isNaN() isNaN 方法可以用来判断一个值是否为 NaN。
+14. isFinite() isFinite 方法返回一个布尔值，表示某个值是否为正常的数值。
+    isFinite(Infinity) // false
+    isFinite(-Infinity) // false
+    isFinite(NaN) // false
+    isFinite(undefined) // false
+    isFinite(null) // true
+    isFinite(-1) // true
+    **除了 Infinity、-Infinity、NaN 和 undefined 这几个值会返回 false，isFinite 对于其他的数值都会返回 true。**
 
 #### 正则表达式
 

@@ -1,5 +1,5 @@
 ---
-title: futter
+title: flutter
 date: 2019-08-13 15:32:48
 tags:
 ---
@@ -12,6 +12,7 @@ tags:
 ## 安装
 
 [参考地址](https://book.flutterchina.club/chapter1/install_flutter.html)
+[参考地址 2](https://www.jianshu.com/p/7cbf82b4854e)
 
 1. 下载 flutter SDK：[git clone](https://github.com/flutter/flutter.git)
 
