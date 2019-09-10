@@ -11,6 +11,7 @@ tags:
 
 ## 容易忘
 
+- letter-spacing: 4px; 字符之间的间距
 - visibility：hidden 隐藏
 - visibility：visible 显示
   **隐藏后仍然占据空间**
@@ -55,6 +56,7 @@ tags:
 justify-content(项目在主轴方向上的对齐方式):center 居中
                                         space-between 第一个最左边，最后一个在最右边，其他间距相同
                                         space-around 左右一倍间距，中间两倍间距
+                                        space-evenly 间距相等
                                         flex-start  全靠左
                                         flex-end 全靠右
 aligh-items(项目在副轴上的对齐方式):center 居中
@@ -74,8 +76,9 @@ align-content(多轴线是副轴方向上的对齐方式)
 order 规定项目的排列顺序，值是数字（默认0），数字越大位置约靠后
 flex-grow 规定项目的放大比例，默认是0，即存在剩余空间也不放大，设置为1，即占满剩余空间
 flex-shrink 定义了项目的缩小比例，默认为1，即如果空间不足该项目缩小，设置为0，即项目不会缩小
-flex-basis
-flex-self 单个项目的对齐方式，属性允许单个项目在副轴上有与其他项目不一样的对齐方式，可覆盖aligh-items属性
+flex-basis 定义了在分配剩余空间之前元素的默认大小。相当于对浏览器提前告知：浏览器兄，我要占据这么大的空间，提前帮我预留好。`flex-basis: <length> | auto; /* 默认值是 auto */`
+align-self 单个项目的对齐方式，属性允许单个项目在副轴上有与其他项目不一样的对齐方式，可覆盖aligh-items属性
+
 ```
 
 xxx[] 属性选择器

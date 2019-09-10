@@ -331,6 +331,7 @@ reduce 用法  用list生成对象
     isFinite(null) // true
     isFinite(-1) // true
     **除了 Infinity、-Infinity、NaN 和 undefined 这几个值会返回 false，isFinite 对于其他的数值都会返回 true。**
+15. Number.isInteger() 方法用来判断给定的参数是否为整数。
 
 #### 正则表达式
 
