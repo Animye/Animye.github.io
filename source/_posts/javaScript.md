@@ -364,3 +364,30 @@ reduce 用法  用list生成对象
 - 在函数内部创建新的函数
 
 - 新的函数在执行时，访问了函数的变量对象
+
+### js 的方法
+
+为 button 元素添加点击事件。 当用户点击按钮时，在 id="demo" 的 p 元素上输出 "Hello World" :
+
+```js
+document.getElementById('myBtn').addEventListener('click', function() {
+  document.getElementById('demo').innerHTML = 'Hello World'
+})
+```
+
+#### 判断语句之：问号判断
+
+```js
+两个条件判断：
+
+enabled == '1'  ?  '是' : '否'
+
+若enabled == '1'成立'是'为真
+
+三个条件判断：
+
+enabled == '1'  ?  '已审核' : enabled == '0'  ? '未审核 ' ： '已锁定'
+
+若enabled == '1'成立'已审核'为真，否则执行 enabled == '0'  ? '未审核 ' ： '已锁定'
+
+```

@@ -468,3 +468,68 @@ module.exports = {
   }
 }
 ```
+
+this.\$el.textContent
+
+#### VUE 全局过滤器 filter
+
+1.1 过滤器科用在两个地方：双花括号插值 和 v-bind 表达式 中。过滤器应该被添加在 js 表达式的尾部，由管道符号指示
+
+```js
+// 双花括号中
+{
+  {
+    message | capitalize
+  }
+}
+
+// 在v-bind 中
+;<div v-bind:id=' rawId | formatId'></div>
+```
+
+1.2 定义过滤器
+
+- 在组件选项中定义本地过滤器
+
+```js
+//  参数1：表示要过滤的内容
+//  参数2：表示传递给过滤器的格式
+
+filters: {
+
+  capitalize: function (value) {
+    if (!value) return ''
+    value = value.toString()
+    return value.charAt(0).toUpperCase() + value.slice(1)
+  }
+
+}
+```
+
+- 在创建 Vue 实例前定义全局过滤器
+
+```js
+//  参数1：过滤器名称
+//  参数2：过滤器的逻辑
+
+Vue.filter('capitalize', function(value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
+
+new Vue({
+  // ...
+})
+```
+
+#### vuex 在模块中 getters 和 actions 命名重复会冲突，用命名空间即可解决
+
+```js
+export default {
+  namespaced: true,
+  state,
+  actions,
+  mutations
+}
+```
