@@ -72,7 +72,7 @@ var a = 10 // 变量对象
 var b = { a: 10 } // 变量b存在于变量对象中，{a: 10} 作为对象存在于堆内存中
 ```
 
-![avatar](https://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imagemogr2/auto-orient)
+![avatar](/assets/img/变量对象.png)
 
 ## 变量
 

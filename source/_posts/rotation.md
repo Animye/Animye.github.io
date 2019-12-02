@@ -1,5 +1,6 @@
 ---
 title: Rotation chart
+date: 2019-02-26 17:42:29
 tags:
   - 轮播图
 ---
