@@ -364,7 +364,58 @@
 		</ul>
 	</div>
  
-  
+   
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/18/htmlReact/" alt="微信分享二维码">
+  </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+          
           
            
        <div style="margin-top:10px;">
@@ -415,6 +466,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#react-介绍"><span class="toc-number">1.</span> <span class="toc-text">react 介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单页面应用"><span class="toc-number">2.</span> <span class="toc-text">单页面应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#搭建-react-开发环境"><span class="toc-number">2.1.</span> <span class="toc-text">搭建 react 开发环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-的-hello-world"><span class="toc-number">2.2.</span> <span class="toc-text">react 的 hello world</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-内的-jsx-语法"><span class="toc-number">2.3.</span> <span class="toc-text">react 内的 jsx 语法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#组件的样式"><span class="toc-number">2.4.</span> <span class="toc-text">组件的样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-图片处理"><span class="toc-number">2.5.</span> <span class="toc-text">react 图片处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-的-state-状态"><span class="toc-number">2.6.</span> <span class="toc-text">react 的 state(状态)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-组件中的-setInterval"><span class="toc-number">2.7.</span> <span class="toc-text">react 组件中的 setInterval</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-组件的-props-类型检查以及设置-props-的默认值"><span class="toc-number">2.8.</span> <span class="toc-text">react 组件的 props 类型检查以及设置 props 的默认值</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#类型检测"><span class="toc-number">2.8.1.</span> <span class="toc-text">类型检测</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置默认值"><span class="toc-number">2.8.2.</span> <span class="toc-text">设置默认值</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-表单"><span class="toc-number">2.9.</span> <span class="toc-text">react 表单</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#受控组件-提倡"><span class="toc-number">2.9.1.</span> <span class="toc-text">受控组件(提倡)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#非受控组件"><span class="toc-number">2.9.2.</span> <span class="toc-text">非受控组件</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-的状态提升"><span class="toc-number">2.10.</span> <span class="toc-text">react 的状态提升</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#子组件如何修改父组件的-state"><span class="toc-number">2.10.1.</span> <span class="toc-text">子组件如何修改父组件的 state</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-路由-页面跳转-react-router"><span class="toc-number">2.11.</span> <span class="toc-text">react 路由(页面跳转) react-router</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-项目部署"><span class="toc-number">2.12.</span> <span class="toc-text">react 项目部署</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#部署到-github-gh-pages-分支"><span class="toc-number">2.12.0.1.</span> <span class="toc-text">部署到 github gh-pages 分支</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#部署到-netlify-免费服务器"><span class="toc-number">2.12.0.2.</span> <span class="toc-text">部署到 netlify 免费服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#react-redux-demo-参考地址"><span class="toc-number">2.12.0.2.1.</span> <span class="toc-text">react-redux-demo 参考地址</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#react-的-redux"><span class="toc-number">2.13.</span> <span class="toc-text">react 的 redux</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#redux-流程"><span class="toc-number">2.13.1.</span> <span class="toc-text">redux 流程</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>       <div id="gitment-ctn"></div>
@@ -577,15 +641,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">nuxt</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,6 +666,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">-ijj</a>
               </li>
             
             <div class="clearfix"></div>
@@ -758,5 +826,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>

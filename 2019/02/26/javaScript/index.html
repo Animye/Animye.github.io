@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="Animye的博客">
 <meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;JavaScript 是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为 JavaScript 引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在 HTML（标准通用标记语言下的一个应用）网页上使用，用来给 HTML 网页增加动态功能。现在 是互联网上最流行的脚本语言，这门语言可用于 HTML">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imagemogr2/auto-orient">
-<meta property="og:updated_time" content="2019-12-02T11:08:49.597Z">
+<meta property="og:image" content="http://yoursite.com/assets/img/变量对象.png">
+<meta property="og:updated_time" content="2019-12-02T12:37:07.465Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript  原生JS 基础">
 <meta name="twitter:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;JavaScript 是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为 JavaScript 引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在 HTML（标准通用标记语言下的一个应用）网页上使用，用来给 HTML 网页增加动态功能。现在 是互联网上最流行的脚本语言，这门语言可用于 HTML">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imagemogr2/auto-orient"> 
+<meta name="twitter:image" content="http://yoursite.com/assets/img/变量对象.png"> 
     <link rel="alternative" href="/atom.xml" title="Animye的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -234,7 +234,7 @@
 <li>NAN：NaN 是 JavaScript 的特殊值，表示“非数字”（Not a Number），主要出现在将字符串解析成数字出错的场合。<br><strong>需要注意的是，NaN 不是独立的数据类型，而是一个特殊数值，它的数据类型依然属于 Number，使用 typeof 运算符可以看得很清楚。NaN 不等于任何值，包括它本身。</strong></li>
 </ol>
 <h2 id="内存空间"><a href="#内存空间" class="headerlink" title="内存空间"></a>内存空间</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">10</span> <span class="comment">// 变量对象</span></span><br><span class="line"><span class="keyword">var</span> b = &#123; <span class="attr">a</span>: <span class="number">10</span> &#125; <span class="comment">// 变量b存在于变量对象中，&#123;a: 10&#125; 作为对象存在于堆内存中</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://upload-images.jianshu.io/upload_images/599584-8e93616d7afcf811.png?imagemogr2/auto-orient" alt="avatar"></p>
+<p><img src="/assets/img/变量对象.png" alt="avatar"></p>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
 <li><p>分两种一种是基本类型，一种是引用类型</p>
 <p><code>基本类型就是基础数据类型 ,引用类型就是复杂数据类型obj及其引申出的</code><br>基本类型：在内存中占据实际大小的空间，赋值的时候，会在内存中创建一份新的副本。<br>引用类型：指向对象的指针而不是对象本身，赋值的时候，只是创建了一个新的指针指向对象。<br>确定一个变量是哪种基本类型用 typeof 操作符。<br>确定一个变量是哪种引用类型用 instanceof 操作符。<br><a href="https://www.jianshu.com/p/66f3aef3e131" target="_blank" rel="noopener">参考链接</a></p>
@@ -381,7 +381,58 @@
 		</ul>
 	</div>
  
-  
+   
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/26/javaScript/" alt="微信分享二维码">
+  </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+          
           
            
        <div style="margin-top:10px;">
@@ -409,11 +460,11 @@
  
 <nav id="article-nav">
   
-    <a href="/2019/07/22/ionic/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/02/26/rotation/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          ionic
+          Rotation chart
         
       </div>
     </a>
@@ -437,6 +488,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础"><span class="toc-number">1.</span> <span class="toc-text">基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#内存空间"><span class="toc-number">2.</span> <span class="toc-text">内存空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量"><span class="toc-number">3.</span> <span class="toc-text">变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数据类型"><span class="toc-number">4.</span> <span class="toc-text">数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#五种基础数据类型"><span class="toc-number">4.1.</span> <span class="toc-text">五种基础数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#一种复杂数据类型"><span class="toc-number">4.2.</span> <span class="toc-text">一种复杂数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内置对象"><span class="toc-number">4.3.</span> <span class="toc-text">内置对象</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Array"><span class="toc-number">4.3.1.</span> <span class="toc-text">Array</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#数组的方法"><span class="toc-number">4.3.1.1.</span> <span class="toc-text">数组的方法</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String"><span class="toc-number">4.3.2.</span> <span class="toc-text">String</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#字符串的方法"><span class="toc-number">4.3.2.1.</span> <span class="toc-text">字符串的方法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#字符串转义"><span class="toc-number">4.3.2.2.</span> <span class="toc-text">字符串转义</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数学对象"><span class="toc-number">4.3.3.</span> <span class="toc-text">数学对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则表达式"><span class="toc-number">4.3.4.</span> <span class="toc-text">正则表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#正则表达式的规则"><span class="toc-number">4.3.4.1.</span> <span class="toc-text">正则表达式的规则</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数据结构的栈和队列操作"><span class="toc-number">4.3.5.</span> <span class="toc-text">数据结构的栈和队列操作</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#栈"><span class="toc-number">4.4.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#队列"><span class="toc-number">4.5.</span> <span class="toc-text">队列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包的形成需要两个条件"><span class="toc-number">4.6.</span> <span class="toc-text">闭包的形成需要两个条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#js-的方法"><span class="toc-number">4.7.</span> <span class="toc-text">js 的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#判断语句之：问号判断"><span class="toc-number">4.7.1.</span> <span class="toc-text">判断语句之：问号判断</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>       <div id="gitment-ctn"></div>
@@ -599,15 +663,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">nuxt</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -624,6 +688,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">-ijj</a>
               </li>
             
             <div class="clearfix"></div>
@@ -780,5 +848,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body>
 </html>
