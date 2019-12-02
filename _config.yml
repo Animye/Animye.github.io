@@ -1,7 +1,6 @@
 # Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
-
 # Site
 title: Animye的博客
 subtitle: 你还有很多未完成的梦，还有什么理由停下脚步......
@@ -101,3 +100,13 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+# Extensions
+## Plugins: http://hexo.io/plugins/
+#RSS订阅
+plugin:
+- hexo-generator-feed
+#Feed Atom
+feed:
+type: atom
+path: atom.xml
+limit: 20
