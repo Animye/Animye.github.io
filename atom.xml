@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-03T09:26:15.210Z</updated>
+  <updated>2019-12-03T11:00:55.649Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Object.keys方法之详解</title>
+    <link href="http://yoursite.com/2019/12/03/Object-keys%E6%96%B9%E6%B3%95%E4%B9%8B%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2019/12/03/Object-keys%E6%96%B9%E6%B3%95%E4%B9%8B%E8%AF%A6%E8%A7%A3/</id>
+    <published>2019-12-03T10:57:23.000Z</published>
+    <updated>2019-12-03T11:00:55.649Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.keys(obj)</span><br><span class="line"></span><br><span class="line">参数：要返回其枚举自身属性的对象</span><br><span class="line"></span><br><span class="line">返回值：一个表示给定对象的所有可枚举属性的字符串数组</span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="处理对象，返回可枚举的属性数组"><a href="#处理对象，返回可枚举的属性数组" class="headerlink" title="处理对象，返回可枚举的属性数组"></a>处理对象，返回可枚举的属性数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">address</span>: <span class="string">"深圳"</span>, <span class="attr">getName</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(person); <span class="comment">// ["name", "age", "address","getName"]</span></span><br></pre></td></tr></table></figure><h2 id="处理数组，返回索引值数组"><a href="#处理数组，返回索引值数组" class="headerlink" title="处理数组，返回索引值数组"></a>处理数组，返回索引值数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(arr); <span class="comment">// ["0", "1", "2", "3", "4", "5"]</span></span><br></pre></td></tr></table></figure><h2 id="处理字符串，返回索引值数组"><a href="#处理字符串，返回索引值数组" class="headerlink" title="处理字符串，返回索引值数组"></a>处理字符串，返回索引值数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"saasd 字符串"</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(str); <span class="comment">// ["0", "1", "2", "3", "4", "5", "6", "7"]</span></span><br></pre></td></tr></table></figure><h2 id="常用技巧"><a href="#常用技巧" class="headerlink" title="常用技巧"></a>常用技巧</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">address</span>: <span class="string">"深圳"</span>, <span class="attr">getName</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(person).map(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  person[key]; <span class="comment">// 获取到属性对应的值，做一些处理</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h2 id="Object-values-和-Object-keys-是相反的操作，把一个对象的值转换为数组"><a href="#Object-values-和-Object-keys-是相反的操作，把一个对象的值转换为数组" class="headerlink" title="Object.values()和 Object.keys()是相反的操作，把一个对象的值转换为数组"></a>Object.values()和 Object.keys()是相反的操作，把一个对象的值转换为数组</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;语法&quot;&gt;&lt;a href=&quot;#语法&quot; class=&quot;headerlink&quot; title=&quot;语法&quot;&gt;&lt;/a&gt;语法&lt;/h2&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;Object&lt;/span&gt;.keys(obj)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;参数：要返回其枚举自身属性的对象&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;返回值：一个表示给定对象的所有可枚举属性的字符串数组&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>vue中mixins的使用方法</title>
     <link href="http://yoursite.com/2019/12/03/vue%E4%B8%ADmixins%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/"/>
     <id>http://yoursite.com/2019/12/03/vue%E4%B8%ADmixins%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</id>
     <published>2019-12-03T01:21:20.000Z</published>
-    <updated>2019-12-03T09:26:15.210Z</updated>
+    <updated>2019-12-03T09:53:48.308Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="mixins-基础概况"><a href="#mixins-基础概况" class="headerlink" title="mixins 基础概况"></a>mixins 基础概况</h2><ul><li>混入 (mixins)： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。</li></ul><a id="more"></a><h2 id="mixins-和其他的区别"><a href="#mixins-和其他的区别" class="headerlink" title="mixins 和其他的区别"></a>mixins 和其他的区别</h2><h3 id="与vuex的区别"><a href="#与vuex的区别" class="headerlink" title="与vuex的区别"></a>与vuex的区别</h3><p>经过上面的例子之后，他们之间的区别应该很明显了哈~</p><ul><li><p>vuex：用来做状态管理的，里面定义的变量在每个组件中均可以使用和修改，在任一组件中修改此变量的值之后，其他组件中此变量的值也会随之修改。</p></li><li><p>Mixins：可以定义共用的变量，在每个组件中使用，引入组件中之后，各个变量是相互独立的，值的修改在组件中不会相互影响。</p></li></ul><h3 id="与公共组件的区别"><a href="#与公共组件的区别" class="headerlink" title="与公共组件的区别"></a>与公共组件的区别</h3><p>同样明显的区别来再列一遍哈~</p><ul><li><p>组件：在父组件中引入组件，相当于在父组件中给出一片独立的空间供子组件使用，然后根据props来传值，但本质上两者是相对独立的。</p></li><li><p>Mixins：则是在引入组件之后与组件中的对象和方法进行合并，相当于扩展了父组件的对象与方法，可以理解为形成了一个新的组件。</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="mixins-基础概况"><a href="#mixins-基础概况" class="headerlink" title="mixins 基础概况"></a>mixins 基础概况</h2><ul><li>混入 (mixins)： 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。</li></ul><a id="more"></a><h2 id="mixins-的特点"><a href="#mixins-的特点" class="headerlink" title="mixins 的特点"></a>mixins 的特点</h2><ol><li>方法和参数在各组件中不共享</li><li>值为对象的选项，如 methods,components 等，选项会被合并，键冲突的组件会覆盖混入对象的</li><li>值为函数的选项，如 created,mounted 等，就会被合并调用，混合对象里的钩子函数在组件里的钩子函数之前调用</li></ol><h2 id="mixins-和其他的区别"><a href="#mixins-和其他的区别" class="headerlink" title="mixins 和其他的区别"></a>mixins 和其他的区别</h2><h3 id="与-vuex-的区别"><a href="#与-vuex-的区别" class="headerlink" title="与 vuex 的区别"></a>与 vuex 的区别</h3><p>经过上面的例子之后，他们之间的区别应该很明显了哈~</p><ul><li><p>vuex：用来做状态管理的，里面定义的变量在每个组件中均可以使用和修改，在任一组件中修改此变量的值之后，其他组件中此变量的值也会随之修改。</p></li><li><p>Mixins：可以定义共用的变量，在每个组件中使用，引入组件中之后，各个变量是相互独立的，值的修改在组件中不会相互影响。</p></li></ul><h3 id="与公共组件的区别"><a href="#与公共组件的区别" class="headerlink" title="与公共组件的区别"></a>与公共组件的区别</h3><p>同样明显的区别来再列一遍哈~</p><ul><li><p>组件：在父组件中引入组件，相当于在父组件中给出一片独立的空间供子组件使用，然后根据 props 来传值，但本质上两者是相对独立的。</p></li><li><p>Mixins：则是在引入组件之后与组件中的对象和方法进行合并，相当于扩展了父组件的对象与方法，可以理解为形成了一个新的组件。</p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -413,30 +432,6 @@
       <category term="nuxt" scheme="http://yoursite.com/tags/nuxt/"/>
     
       <category term="vue" scheme="http://yoursite.com/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project deployment</title>
-    <link href="http://yoursite.com/2019/02/25/deployment/"/>
-    <id>http://yoursite.com/2019/02/25/deployment/</id>
-    <published>2019-02-25T05:15:09.000Z</published>
-    <updated>2019-12-02T11:08:49.590Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h4 id="项目部署到服务器"><a href="#项目部署到服务器" class="headerlink" title="项目部署到服务器"></a>项目部署到服务器</h4><p>一、 <code>github</code>免费服务</p><ul><li>将你的原代码上传到 git 仓库，在仓库内建立一个分支<code>gh-pages</code>，通过插件或手动将 dist 文件夹下的所有文件上传到该分支，访问 用户名.github.io/仓库名，即能看到自己的项目了</li><li>注意：package.json 文件下要写一个 homepage：该仓库地址<a id="more"></a><ul><li>如何将 dist 下的文件 上传到 <code>gh-pages</code></li></ul><ol><li>手动建立新分支</li><li>使用<code>gh-pages</code>包即插件 帮助我们自动上传</li></ol></li></ul><p>二、 <code>netlify</code>免费服务</p><ul><li>只需要将源代码上传到 git 仓库，在 netlify 网站找到对应的仓库不需要添加 homepage，选择正确的文件及命令即可</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h4 id=&quot;项目部署到服务器&quot;&gt;&lt;a href=&quot;#项目部署到服务器&quot; class=&quot;headerlink&quot; title=&quot;项目部署到服务器&quot;&gt;&lt;/a&gt;项目部署到服务器&lt;/h4&gt;&lt;p&gt;一、 &lt;code&gt;github&lt;/code&gt;免费服务&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将你的原代码上传到 git 仓库，在仓库内建立一个分支&lt;code&gt;gh-pages&lt;/code&gt;，通过插件或手动将 dist 文件夹下的所有文件上传到该分支，访问 用户名.github.io/仓库名，即能看到自己的项目了&lt;/li&gt;
-&lt;li&gt;注意：package.json 文件下要写一个 homepage：该仓库地址&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-    
-    
-      <category term="项目部署" scheme="http://yoursite.com/tags/%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"/>
     
   </entry>
   

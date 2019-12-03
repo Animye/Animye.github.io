@@ -6,15 +6,19 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="dns-prefetch" href="http://yoursite.com">
-    <title>Tag: jQuery | Animye的博客</title>
+    <title>Object.keys方法之详解 | Animye的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Animye的博客">
-<meta property="og:url" content="http://yoursite.com/tags/jQuery/index.html">
+    <meta name="description" content="语法12345Object.keys(obj)参数：要返回其枚举自身属性的对象返回值：一个表示给定对象的所有可枚举属性的字符串数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Object.keys方法之详解">
+<meta property="og:url" content="http://yoursite.com/2019/12/03/Object-keys方法之详解/index.html">
 <meta property="og:site_name" content="Animye的博客">
+<meta property="og:description" content="语法12345Object.keys(obj)参数：要返回其枚举自身属性的对象返回值：一个表示给定对象的所有可枚举属性的字符串数组">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-12-03T11:00:55.649Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Animye的博客"> 
+<meta name="twitter:title" content="Object.keys方法之详解">
+<meta name="twitter:description" content="语法12345Object.keys(obj)参数：要返回其枚举自身属性的对象返回值：一个表示给定对象的所有可枚举属性的字符串数组"> 
     <link rel="alternative" href="/atom.xml" title="Animye的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -168,61 +172,226 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Object-keys方法之详解" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <header class="article-header">
       
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/jQuery/" class="archive-article-date">
-  	<time datetime="2019-02-26T05:42:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/jQuery/">jQuery 基础</a>
+    <h1 class="article-title" itemprop="name">
+      Object.keys方法之详解
     </h1>
   
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
+ 
+      <!--  
+        <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">206字</span>
+    </span>
+  </span>
+  &nbsp; | &nbsp;
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div> 
+          -->
+       <a href="/2019/12/03/Object-keys方法之详解/" class="archive-article-date">
+  	<time datetime="2019-12-03T10:57:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-03</time>
+</a>  
+      <span class="archive-article-date">
+        阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
+      
     </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
     
+    <div class="article-entry" itemprop="articleBody">
+       <h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.keys(obj)</span><br><span class="line"></span><br><span class="line">参数：要返回其枚举自身属性的对象</span><br><span class="line"></span><br><span class="line">返回值：一个表示给定对象的所有可枚举属性的字符串数组</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h2 id="处理对象，返回可枚举的属性数组"><a href="#处理对象，返回可枚举的属性数组" class="headerlink" title="处理对象，返回可枚举的属性数组"></a>处理对象，返回可枚举的属性数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">address</span>: <span class="string">"深圳"</span>, <span class="attr">getName</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(person); <span class="comment">// ["name", "age", "address","getName"]</span></span><br></pre></td></tr></table></figure>
+<h2 id="处理数组，返回索引值数组"><a href="#处理数组，返回索引值数组" class="headerlink" title="处理数组，返回索引值数组"></a>处理数组，返回索引值数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(arr); <span class="comment">// ["0", "1", "2", "3", "4", "5"]</span></span><br></pre></td></tr></table></figure>
+<h2 id="处理字符串，返回索引值数组"><a href="#处理字符串，返回索引值数组" class="headerlink" title="处理字符串，返回索引值数组"></a>处理字符串，返回索引值数组</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">"saasd 字符串"</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(str); <span class="comment">// ["0", "1", "2", "3", "4", "5", "6", "7"]</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用技巧"><a href="#常用技巧" class="headerlink" title="常用技巧"></a>常用技巧</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> person = &#123; <span class="attr">name</span>: <span class="string">"张三"</span>, <span class="attr">age</span>: <span class="number">25</span>, <span class="attr">address</span>: <span class="string">"深圳"</span>, <span class="attr">getName</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.keys(person).map(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  person[key]; <span class="comment">// 获取到属性对应的值，做一些处理</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="Object-values-和-Object-keys-是相反的操作，把一个对象的值转换为数组"><a href="#Object-values-和-Object-keys-是相反的操作，把一个对象的值转换为数组" class="headerlink" title="Object.values()和 Object.keys()是相反的操作，把一个对象的值转换为数组"></a>Object.values()和 Object.keys()是相反的操作，把一个对象的值转换为数组</h2>  
+      <div class="page-reward">
+        <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">
+                    <i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i>
+                  </p>
+                  <div class="reward-box">
+                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+        
+   
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
 
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/12/03/Object-keys方法之详解/" alt="微信分享二维码">
+  </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+          
+          
+           
+       <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">206字</span>
+    </span>
+  </span>
+  &nbsp; | &nbsp;
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div> 
+         
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+ 
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/03/vue中mixins的使用方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue中mixins的使用方法</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+  <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#语法"><span class="toc-number">1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理对象，返回可枚举的属性数组"><span class="toc-number">2.</span> <span class="toc-text">处理对象，返回可枚举的属性数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理数组，返回索引值数组"><span class="toc-number">3.</span> <span class="toc-text">处理数组，返回索引值数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#处理字符串，返回索引值数组"><span class="toc-number">4.</span> <span class="toc-text">处理字符串，返回索引值数组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用技巧"><span class="toc-number">5.</span> <span class="toc-text">常用技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Object-values-和-Object-keys-是相反的操作，把一个对象的值转换为数组"><span class="toc-number">6.</span> <span class="toc-text">Object.values()和 Object.keys()是相反的操作，把一个对象的值转换为数组</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>       <div id="gitment-ctn"></div>
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css" />
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<!-- <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script> -->
+
+<script>
+  var gitment = new Gitment({
+    // id: 'http://yoursite.com/2019/12/03/Object-keys方法之详解/',
+    id: 'Tue Dec 03 2019 18:57:23 GMT+0800',
+    // id: '{{ page.date }}',
+    owner: 'Animye',
+    // owner: '{{ theme.gitment.github_user }}',
+    repo: 'Animye.github.io',
+    // repo: '{{ theme.gitment.github_repo }}',
+    oauth: {
+      client_id: 'c8096215035deb2e7daa',
+      client_secret: 'a58d752b35cb387ee4ce93fbaa167aed8518eeda'
+    }
+  })
+  gitment.render('gitment-ctn')
+</script>
+<!-- var gitment = new {{CommentsClass}}({
+  id: '{{ page.date }}',
+  owner: '{{ theme.gitment.github_user }}',
+  repo: '{{ theme.gitment.github_repo }}', -->
+  
 
           </div>
         </div>
@@ -282,9 +451,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
