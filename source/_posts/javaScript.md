@@ -30,24 +30,24 @@ tags:
 7. null 和 undefined 区别是这样的：null 是一个表示“空”的对象，转为数值时为 0；undefined 是一个表示"此处无定义"的原始值，转为数值时为 NaN。
 
 ```js
-下面是返回undefined的经典场景
+下面是返回undefined的经典场景;
 // 变量声明了，但没有赋值
-var i
-i // undefined
+var i;
+i; // undefined
 
 // 调用函数时，应该提供的参数没有提供，该参数等于 undefined
 function f(x) {
-  return x
+  return x;
 }
-f() // undefined
+f(); // undefined
 
 // 对象没有赋值的属性
-var o = new Object()
-o.p // undefined
+var o = new Object();
+o.p; // undefined
 
 // 函数没有返回值时，默认返回 undefined
 function f() {}
-f() // undefined
+f(); // undefined
 ```
 
 8. false：转换规则是除了下面六个值被转为 false，其他值都视为 true。
@@ -68,8 +68,8 @@ f() // undefined
 ## 内存空间
 
 ```js
-var a = 10 // 变量对象
-var b = { a: 10 } // 变量b存在于变量对象中，{a: 10} 作为对象存在于堆内存中
+var a = 10; // 变量对象
+var b = { a: 10 }; // 变量b存在于变量对象中，{a: 10} 作为对象存在于堆内存中
 ```
 
 ![avatar](/assets/img/变量对象.png)
@@ -165,16 +165,16 @@ return 有一个额外的意思，就是当做下一次遍历数组的初始值
 - 已知一个数组随机
 
 ```js
-const arr = [1, 2, 3, 4, 5]
-const newArr = []
+const arr = [1, 2, 3, 4, 5];
+const newArr = [];
 for (let index = 0; index < arr.length; index++) {
-  const num = Math.floor(Math.random() * arr.length)
-  const val = arr[num]
-  newArr.push(val)
-  index--
-  arr.splice(num, 1)
+  const num = Math.floor(Math.random() * arr.length);
+  const val = arr[num];
+  newArr.push(val);
+  index--;
+  arr.splice(num, 1);
 }
-console.log(newArr)
+console.log(newArr);
 ```
 
 - 已知一个数组去重
@@ -255,6 +255,35 @@ reduce 用法  用list生成对象
       }
       generatelist(list, 99)
 ```
+
+##### forEach 和 Map 的区别
+
+- forEach 适合于你并不打算改变数据的时候，而只是想用数据做一些事情 – 比如存入数据库或则打印出来
+
+```js
+let arr = ["a", "b", "c", "d"];
+arr.forEach(letter => {
+  console.log(letter);
+});
+// a
+// b
+// c
+// d
+```
+
+- map()适用于你要改变数据值的时候。不仅仅在于它更快，而且返回一个新的数组。这样的优点在于你可以使用复合(composition)(map(), filter(), reduce()等组合使用)来玩出更多的花样。map()适用于你要改变数据值的时候。不仅仅在于它更快，而且返回一个新的数组。这样的优点在于你可以使用复合(composition)(map(), filter(), reduce()等组合使用)来玩出更多的花样。
+
+```js
+let arr = [1, 2, 3, 4, 5];
+let arr2 = arr.map(num => num * 2).filter(num => num > 5);
+// arr2 = [6, 8, 10]
+```
+
+- 核心要点
+
+能用 forEach()做到的，map()同样可以。反过来也是如此。
+map()会分配内存空间存储新数组并返回，forEach()不会返回数据。
+forEach()允许 callback 更改原始数组的元素。map()返回新的数组。
 
 #### String
 
@@ -370,9 +399,9 @@ reduce 用法  用list生成对象
 为 button 元素添加点击事件。 当用户点击按钮时，在 id="demo" 的 p 元素上输出 "Hello World" :
 
 ```js
-document.getElementById('myBtn').addEventListener('click', function() {
-  document.getElementById('demo').innerHTML = 'Hello World'
-})
+document.getElementById("myBtn").addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "Hello World";
+});
 ```
 
 #### 判断语句之：问号判断

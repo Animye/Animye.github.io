@@ -63,7 +63,7 @@ vue 允许在 template 内写 js
 - 在开始标签内 需要使用指令 v-bind 如何使用 例子如下
 
   ```js
-  <h1 v-bind:class='js语法' />
+  <h1 v-bind:class="js语法" />
   // v-bind:  指令可以简写成   :
   ```
 
@@ -75,7 +75,7 @@ vue 组件处理样式的方案
 
 - 对象语法 例子: 加上了 active class 名
   ```js
-  <div v-bind:class='{ active: true }' />
+  <div v-bind:class="{ active: true }" />
   ```
 - 数组语法 例子: 加上了 active 以及 bg class 名
   ```js
@@ -96,7 +96,7 @@ vue 组件处理样式的方案
 
 - 数组语法 例子
   ```js
-  <div v-bind:style='[styles, otherStyles]' />
+  <div v-bind:style="[styles, otherStyles]" />
   // styles 和 otherStyles 指的对象  {color: 'red'}
   ```
 
@@ -188,9 +188,9 @@ data() {
 
 ```js
 export default {
-  name: 'btn',
-  props: ['text']
-}
+  name: "btn",
+  props: ["text"]
+};
 ```
 
 写好之后其实 text 就相当于了子组件的一个数据了
@@ -221,7 +221,7 @@ export default {
 子组件
 
 ```js
-this.$emit('clickFun')
+this.$emit("clickFun");
 ```
 
 子组件在 template 中直接使用 `$emit('自定义事件名')`
@@ -302,38 +302,38 @@ vue 项目内的页面跳转，本身 vue 内不带路由功能，需要自己�
 - 新建一个 src/router.js
 - 在 router.js 内给 vue 项目安装上路由功能
   ```js
-  import Vue from 'vue'
-  import VueRouter from 'vue-router'
-  Vue.use(VueRouter)
+  import Vue from "vue";
+  import VueRouter from "vue-router";
+  Vue.use(VueRouter);
   ```
 - 创建路由 `new VueRouter({routes:xxxxx,mode: xxxx})`
 
   ```js
   const routes = [
     {
-      component: '组件名',
-      path: '地址'
+      component: "组件名",
+      path: "地址"
     }
-  ]
+  ];
   const router = new VueRouter({
     routes,
-    mode: 'history'
-  })
+    mode: "history"
+  });
   ```
 
 - 将创建好的路由导出
 
   ```js
-  export default router
+  export default router;
   ```
 
 - 到项目的 main.js 内导入路由并使用
 
   ```js
-  import router from './router'
+  import router from "./router";
   new Vue({
     router
-  })
+  });
   ```
 
 - 在 Vue 项目所有组件内都可以使用路由了
@@ -358,8 +358,8 @@ vue 项目内的页面跳转，本身 vue 内不带路由功能，需要自己�
     ```js
     module.exports = {
       publicPath:
-        process.env.NODE_ENV === 'production' ? '/你的子目录地址/' : '/'
-    }
+        process.env.NODE_ENV === "production" ? "/你的子目录地址/" : "/"
+    };
     ```
 
 - publicPath 配置完毕需要重新编译打包生成新的 dist 文件夹在重新部署到你的 github 上
@@ -373,9 +373,9 @@ vue 项目内的页面跳转，本身 vue 内不带路由功能，需要自己�
 - 在项目下的 src 文件夹下新建一个 store.js。内部写
 
   ```js
-  import Vue from 'vue'
-  import Vuex from 'vuex'
-  Vue.use(Vuex) //详细参考 官方文档中 插件一节(mixins)
+  import Vue from "vue";
+  import Vuex from "vuex";
+  Vue.use(Vuex); //详细参考 官方文档中 插件一节(mixins)
   const store = new Vuex.Store({
     // state 是该项目共享数据的地方
     state: {
@@ -385,11 +385,11 @@ vue 项目内的页面跳转，本身 vue 内不带路由功能，需要自己�
     mutations: {
       changeCount(state, newCount) {
         // 将 count 修改成任意值
-        state.count = newCount
+        state.count = newCount;
       }
     }
-  })
-  export default store
+  });
+  export default store;
   ```
 
 - 进入到项目下的 main.js 文件内，导入 store, 并且在 new Vue 中添加一条属性叫 store 值为你导入的 store
@@ -456,17 +456,17 @@ module.exports = {
   devServer: {
     // 配置代理服务器
     proxy: {
-      '/api': {
-        target: 'https://www.wanandroid.com',
+      "/api": {
+        target: "https://www.wanandroid.com",
         changeOrigin: true,
         ws: true,
         pathRewrite: {
-          '^/api': ''
+          "^/api": ""
         }
       }
     }
   }
-}
+};
 ```
 
 this.\$el.textContent
@@ -479,12 +479,12 @@ this.\$el.textContent
 // 双花括号中
 {
   {
-    message | capitalize
+    message | capitalize;
   }
 }
 
 // 在v-bind 中
-;<div v-bind:id=' rawId | formatId'></div>
+<div v-bind:id=" rawId | formatId"></div>;
 ```
 
 1.2 定义过滤器
@@ -512,15 +512,15 @@ filters: {
 //  参数1：过滤器名称
 //  参数2：过滤器的逻辑
 
-Vue.filter('capitalize', function(value) {
-  if (!value) return ''
-  value = value.toString()
-  return value.charAt(0).toUpperCase() + value.slice(1)
-})
+Vue.filter("capitalize", function(value) {
+  if (!value) return "";
+  value = value.toString();
+  return value.charAt(0).toUpperCase() + value.slice(1);
+});
 
 new Vue({
   // ...
-})
+});
 ```
 
 #### vuex 在模块中 getters 和 actions 命名重复会冲突，用命名空间即可解决
@@ -531,5 +531,17 @@ export default {
   state,
   actions,
   mutations
-}
+};
+```
+
+#### watch
+
+```js
+watch:{
+  xxx: {
+    handler(newVal, oldVel) {},
+    deep: true,
+    immediate: true
+      }
+    }
 ```
