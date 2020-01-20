@@ -149,6 +149,7 @@ var b = { a: 10 }; // 变量b存在于变量对象中，{a: 10} 作为对象存�
     数组的成员有时还是数组，Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。
     flatMap()方法对原数组的每个成员执行一个函数（相当于执行 Array.prototype.map()），然后对返回值组成的数组执行 flat()方法。该方法返回一个新数组，不改变原数组。
 24. reduce()
+25. some() 检测所有元素是否符合条件，符合条件返回 true，不符合返回 false
 
 ```js
 xxx.reduce(function(result,ele,ind,array){rerurn xxx},0)

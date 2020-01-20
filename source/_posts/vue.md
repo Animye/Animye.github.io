@@ -537,11 +537,5 @@ export default {
 #### watch
 
 ```js
-watch:{
-  xxx: {
-    handler(newVal, oldVel) {},
-    deep: true,
-    immediate: true
-      }
-    }
+watch:{ xxx: { handler(newVal, oldVel) {}, deep: true, immediate: true } }
 ```

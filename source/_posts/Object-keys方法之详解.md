@@ -56,6 +56,8 @@ Object.keys(person).map(key => {
 
 ## 使用 Object.values() 将 N 个类似的数据合并成一个
 
+[参考资料](https://segmentfault.com/q/1010000015569060)
+
 ```js
 const source = [
   { title: "问题1", id: 0, content: "A" },
@@ -64,6 +66,7 @@ const source = [
   { title: "问题2", id: 3, content: "D" },
   { title: "问题3", id: 4, content: "E" }
 ];
+// 第一种写法
 const obj = {};
 source.forEach(e => {
   const isHaveObj = obj[e.title];
@@ -79,7 +82,33 @@ source.forEach(e => {
   }
 });
 const result = Object.values(obj);
+// 第二种写法
+let result = [];
+for (let i of source) {
+  const model = result.some(e => {
+    if (e.title == i.title) {
+      e.index++;
+      e.all.push({
+        content: i.content,
+        id: i.id
+      });
+    }
+    return e.title == i.title;
+  });
+  model ||
+    result.push({
+      title: i.title,
+      index: 1,
+      all: [{ content: i.content, id: i.id }]
+    });
+}
 ```
+
+[参考资料](https://segmentfault.com/q/1010000019160603)
+
+(a || b) === (() => { if (a) {return a;} else {return b} })() === (a ? a : b)
+
+(a && b) === (() => { if (a) {return b;} else {return a} })() === (a ? b : a)
 
 ## Object.entries()
 
