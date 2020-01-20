@@ -17,7 +17,7 @@
 <meta property="og:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;JavaScript 是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为 JavaScript 引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在 HTML（标准通用标记语言下的一个应用）网页上使用，用来给 HTML 网页增加动态功能。现在 是互联网上最流行的脚本语言，这门语言可用于 HTML">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/assets/img/变量对象.png">
-<meta property="og:updated_time" content="2020-01-19T07:41:11.814Z">
+<meta property="og:updated_time" content="2020-01-20T03:13:18.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javaScript  原生JS 基础">
 <meta name="twitter:description" content="&amp;#160; &amp;#160; &amp;#160; &amp;#160;JavaScript 是一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为 JavaScript 引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在 HTML（标准通用标记语言下的一个应用）网页上使用，用来给 HTML 网页增加动态功能。现在 是互联网上最流行的脚本语言，这门语言可用于 HTML">
@@ -192,7 +192,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">4.7k字</span>
+      <span class="post-count">4.8k字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -282,6 +282,7 @@
 <li>Array.of(),Array.of 方法用于将一组值，转换为数组。<br><code>Array.of(3, 11, 8) // [3,11,8]</code><br><code>Array.of(3) // [3]</code><br><code>Array.of(3).length // 1</code></li>
 <li>数组实例的 flat()，flatMap(),<br>数组的成员有时还是数组，Array.prototype.flat()用于将嵌套的数组“拉平”，变成一维的数组。该方法返回一个新数组，对原数据没有影响。<br>flatMap()方法对原数组的每个成员执行一个函数（相当于执行 Array.prototype.map()），然后对返回值组成的数组执行 flat()方法。该方法返回一个新数组，不改变原数组。</li>
 <li>reduce()</li>
+<li>some() 检测所有元素是否符合条件，符合条件返回 true，不符合返回 false</li>
 </ol>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xxx.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">result,ele,ind,array</span>)</span>&#123;rerurn xxx&#125;,<span class="number">0</span>)</span><br><span class="line">result:代表最终结果</span><br><span class="line">ele:代表数组的一项</span><br><span class="line">ind:代表对应下标</span><br><span class="line">最后的<span class="number">0</span>:代表最终结果的初始值，是自己定义的</span><br><span class="line"><span class="function"><span class="keyword">function</span>的大括号内必须填写返回最后的结果</span></span><br><span class="line"><span class="function"><span class="title">return</span> 有一个额外的意思，就是当做下一次遍历数组的初始值</span></span><br><span class="line"><span class="function">最后一次的<span class="title">return</span> 就是<span class="title">result</span>函数的返回值</span></span><br><span class="line"><span class="function">每一次<span class="title">reduce</span>内部的函数执行完毕后必须有返回值，原数组不变，返回新的值</span></span><br></pre></td></tr></table></figure>
 <ul>
@@ -458,7 +459,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">4.7k字</span>
+      <span class="post-count">4.8k字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -556,7 +557,7 @@
       </div>
       <footer id="footer">
   <div class="outer">
-    <span style="margin-right:10px;" class="post-count">字数统计：22.5k</span>
+    <span style="margin-right:10px;" class="post-count">字数统计：23.1k</span>
     <span id="busuanzi_container_site_uv">
       本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
       <div id="footer-info">
@@ -699,6 +700,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
@@ -711,11 +716,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">jQuery - jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">常用</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,15 +6,20 @@
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="dns-prefetch" href="http://yoursite.com">
-    <title>Archives: 2019 | Animye的博客</title>
+    <title>项目中常用的代码 | Animye的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Animye的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+    <meta name="description" content="js对象的合并和拷贝">
+<meta name="keywords" content="常用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="项目中常用的代码">
+<meta property="og:url" content="http://yoursite.com/2020/01/20/项目中常用的代码/index.html">
 <meta property="og:site_name" content="Animye的博客">
+<meta property="og:description" content="js对象的合并和拷贝">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-20T03:33:34.369Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Animye的博客"> 
+<meta name="twitter:title" content="项目中常用的代码">
+<meta name="twitter:description" content="js对象的合并和拷贝"> 
     <link rel="alternative" href="/atom.xml" title="Animye的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -168,356 +173,245 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-项目中常用的代码" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <header class="article-header">
       
+  
+    <h1 class="article-title" itemprop="name">
+      项目中常用的代码
+    </h1>
+  
+ 
+      <!--  
+        <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">422字</span>
+    </span>
+  </span>
+  &nbsp; | &nbsp;
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div> 
+          -->
+       <a href="/2020/01/20/项目中常用的代码/" class="archive-article-date">
+  	<time datetime="2020-01-20T02:32:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-20</time>
+</a>  
+      <span class="archive-article-date">
+        阅读量 <span id="busuanzi_value_page_pv"></span>
+      </span>
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/function/" class="archive-article-date">
-  	<time datetime="2019-07-25T01:16:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/function/">function</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
     </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/23/构造函数/" class="archive-article-date">
-  	<time datetime="2019-07-23T02:51:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/23/构造函数/">构造函数</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/23/vue/" class="archive-article-date">
-  	<time datetime="2019-07-23T02:04:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-        </div>
-    	 
+    <div class="article-entry" itemprop="articleBody">
+       <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><h3 id="对象的合并和拷贝"><a href="#对象的合并和拷贝" class="headerlink" title="对象的合并和拷贝"></a>对象的合并和拷贝</h3><a id="more"></a>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果健名相同后面的覆盖前面的</span></span><br><span class="line"><span class="built_in">Object</span>.assign(form, obj)-----&gt;<span class="built_in">Object</span>.assign(目标对象, 被合并的对象)</span><br><span class="line"><span class="comment">//如果不想修改目标对象，可以将目标对象改成空 &#123;&#125;，</span></span><br><span class="line"><span class="built_in">Object</span>.assign(&#123;&#125;,form, obj)</span><br><span class="line"></span><br><span class="line"><span class="comment">//对象的扩展运算符实现拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在此多补充一下对象的扩展运算符的用法：</span></span><br><span class="line"> <span class="comment">// 2.添加属性</span></span><br><span class="line">    <span class="keyword">let</span> obj3 = &#123;...obj,<span class="attr">color</span>:<span class="string">'brown'</span>&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj3)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.修改属性（即使是引用类型，也不会影响原来的值）</span></span><br><span class="line">    <span class="keyword">let</span> obj4 = &#123;...obj,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'梅花鹿'</span>&#125;&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj4)</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 数组的拷贝</span></span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    <span class="keyword">let</span> arr1 = [...arr]</span><br><span class="line">    <span class="built_in">console</span>.log(arr1)</span><br><span class="line"></span><br><span class="line"><span class="comment">//JSON.parse 实现深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> deepObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj ))</span><br></pre></td></tr></table></figure>
+<h3 id="数组的合并去重"><a href="#数组的合并去重" class="headerlink" title="数组的合并去重"></a>数组的合并去重</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//合并</span></span><br><span class="line">xxx.concat();</span><br><span class="line">[...a, ...b];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(xx)];</span><br></pre></td></tr></table></figure>
+<h3 id="json-转换"><a href="#json-转换" class="headerlink" title="json 转换"></a>json 转换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取</span></span><br><span class="line"><span class="built_in">JSON</span>.parse(）</span><br><span class="line"><span class="comment">//存</span></span><br><span class="line"><span class="built_in">JSON</span>.stringify(）</span><br></pre></td></tr></table></figure>
+<h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(<span class="string">'名'</span>） <span class="comment">//取</span></span><br><span class="line">localStorage.setItem(<span class="string">'名'</span>,<span class="string">'值'</span>）<span class="comment">//存</span></span><br></pre></td></tr></table></figure>
+<h3 id="缩减代码"><a href="#缩减代码" class="headerlink" title="缩减代码"></a>缩减代码</h3><p>(a || b) === (() =&gt; { if (a) {return a;} else {return b} })() === (a ? a : b)<br>(a &amp;&amp; b) === (() =&gt; { if (a) {return b;} else {return a} })() === (a ? b : a)</p>
+<h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><h3 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h3><ul>
+<li>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vue.nextTick(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// DOM 更新了</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">this</span>.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="解决路由报错"><a href="#解决路由报错" class="headerlink" title="解决路由报错"></a>解决路由报错</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> originalPush = Router.prototype.push;</span><br><span class="line">Router.prototype.push = <span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params">location</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> originalPush.call(<span class="keyword">this</span>, location).catch(<span class="function"><span class="params">err</span> =&gt;</span> err);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123; <span class="attr">xxx</span>: &#123; handler(newVal, oldVel) &#123;&#125;, <span class="attr">deep</span>: <span class="literal">true</span>, <span class="attr">immediate</span>: <span class="literal">true</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="lodash"><a href="#lodash" class="headerlink" title="lodash"></a>lodash</h2><p><a href="https://www.lodashjs.com/" target="_blank" rel="noopener">官网</a></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.xxx = lodash.throttle(<span class="keyword">this</span>.xxx, <span class="number">1000</span>); <span class="comment">// 节流</span></span><br><span class="line"><span class="keyword">this</span>.xxx = lodash.debounce(<span class="keyword">this</span>.xxx, <span class="number">300</span>); <span class="comment">// 防抖动</span></span><br><span class="line">difference();</span><br><span class="line">_.difference([<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>], [<span class="number">4</span>, <span class="number">2</span>]);</span><br><span class="line"><span class="comment">// =&gt; [3, 1]</span></span><br></pre></td></tr></table></figure>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/23/vue/">vue</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/23/cordova-vue/" class="archive-article-date">
-  	<time datetime="2019-07-23T01:23:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/23/cordova-vue/">cordova-vue</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/22/ionic/" class="archive-article-date">
-  	<time datetime="2019-07-22T09:32:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/22/ionic/">ionic</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/rotation/" class="archive-article-date">
-  	<time datetime="2019-02-26T09:42:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/rotation/">Rotation chart</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
+      <div class="page-reward">
+        <a href="javascript:;" class="page-reward-btn tooltip-top">
+          <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p">
+                    <i class="icon icon-quo-left"></i>谢谢你的打赏<i class="icon icon-quo-right"></i>
+                  </p>
+                  <div class="reward-box">
+                     
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+        </a>
+      </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">轮播图</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">常用</a>
         		</li>
       		
 		</ul>
 	</div>
+ 
+   
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+  <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+  <p>扫一扫，分享到微信</p>
+  <div class="wx-qrcode">
+    <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/20/项目中常用的代码/" alt="微信分享二维码">
+  </div>
+</div>
+
+<div class="mask js-mask"></div>
 
           
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+          
+           
+       <div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-keyboard-o"></i>
+      <span class="post-meta-item-text">  字数统计: </span>
+      <span class="post-count">422字</span>
+    </span>
+  </span>
+  &nbsp; | &nbsp;
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-hourglass-half"></i>
+      <span class="post-meta-item-text">  阅读时长: </span>
+      <span class="post-count">2分</span>
+    </span>
+  </span>
+</div> 
+         
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+ 
+<nav id="article-nav">
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/javaScript/" class="archive-article-date">
-  	<time datetime="2019-02-26T05:43:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
+  
+    <a href="/2019/12/03/Object-keys方法之详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Object.keys方法之详解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+  <aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/javaScript/">javaScript  原生JS 基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">原生JS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的合并和拷贝"><span class="toc-number">1.1.</span> <span class="toc-text">对象的合并和拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的合并去重"><span class="toc-number">1.2.</span> <span class="toc-text">数组的合并去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#json-转换"><span class="toc-number">1.3.</span> <span class="toc-text">json 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存储"><span class="toc-number">1.4.</span> <span class="toc-text">存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缩减代码"><span class="toc-number">1.5.</span> <span class="toc-text">缩减代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue"><span class="toc-number">2.</span> <span class="toc-text">vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nextTick"><span class="toc-number">2.1.</span> <span class="toc-text">nextTick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决路由报错"><span class="toc-number">2.2.</span> <span class="toc-text">解决路由报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch"><span class="toc-number">2.3.</span> <span class="toc-text">watch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lodash"><span class="toc-number">3.</span> <span class="toc-text">lodash</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/jQuery/" class="archive-article-date">
-  	<time datetime="2019-02-26T05:42:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/jQuery/">jQuery 基础</a>
-    </h1>
-  
+        
+    </div>
+</aside>       <div id="gitment-ctn"></div>
+<!-- <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css" />
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script> -->
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<!-- <link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://www.wenjunjiang.win/js/gitment.js"></script> -->
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<script>
+  var gitment = new Gitment({
+    // id: 'http://yoursite.com/2020/01/20/项目中常用的代码/',
+    id: 'Mon Jan 20 2020 10:32:56 GMT+0800',
+    // id: '{{ page.date }}',
+    owner: 'Animye',
+    // owner: '{{ theme.gitment.github_user }}',
+    repo: 'Animye.github.io',
+    // repo: '{{ theme.gitment.github_repo }}',
+    oauth: {
+      client_id: 'c8096215035deb2e7daa',
+      client_secret: 'a58d752b35cb387ee4ce93fbaa167aed8518eeda'
+    }
+  })
+  gitment.render('gitment-ctn')
+</script>
+<!-- var gitment = new {{CommentsClass}}({
+  id: '{{ page.date }}',
+  owner: '{{ theme.gitment.github_user }}',
+  repo: '{{ theme.gitment.github_repo }}', -->
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/htmlCss/" class="archive-article-date">
-  	<time datetime="2019-02-26T05:32:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/htmlCss/">CSS 基础</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/02/26/nuxtVue/" class="archive-article-date">
-  	<time datetime="2019-02-26T02:49:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/02/26/nuxtVue/">NUXT vue 的服务器端渲染(ssr)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">nuxt</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/3/">Next &raquo;</a>
-    </nav>
-  
-
 
           </div>
         </div>
@@ -577,8 +471,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

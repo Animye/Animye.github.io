@@ -8,17 +8,17 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <title>数组includes方法 | Animye的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="借助 includes()方法求两个数组的交集（适用于对象数组）123456var a = [1, 2, &amp;#123; s: 3 &amp;#125;, &amp;#123; s: 4 &amp;#125;, &amp;#123; s: 5 &amp;#125;].map(item =&amp;gt; JSON.stringify(item));var b = [&amp;#123; s: 2 &amp;#125;, &amp;#123; s: 3 &amp;#125;, &amp;">
+    <meta name="description" content="定义 includes() 方法用来判断一个数组是否包含一个指定的值，如果是返回 true，否则 false。  12345[1, 2, 3].includes(2); // true[1, 2, 3].includes(4); // false[1, 2, 3].includes(3, 3); // false[1, 2, 3].includes(3, -1); // true[1, 2, Na">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数组includes方法">
 <meta property="og:url" content="http://yoursite.com/2019/11/28/数组includes方法/index.html">
 <meta property="og:site_name" content="Animye的博客">
-<meta property="og:description" content="借助 includes()方法求两个数组的交集（适用于对象数组）123456var a = [1, 2, &amp;#123; s: 3 &amp;#125;, &amp;#123; s: 4 &amp;#125;, &amp;#123; s: 5 &amp;#125;].map(item =&amp;gt; JSON.stringify(item));var b = [&amp;#123; s: 2 &amp;#125;, &amp;#123; s: 3 &amp;#125;, &amp;">
+<meta property="og:description" content="定义 includes() 方法用来判断一个数组是否包含一个指定的值，如果是返回 true，否则 false。  12345[1, 2, 3].includes(2); // true[1, 2, 3].includes(4); // false[1, 2, 3].includes(3, 3); // false[1, 2, 3].includes(3, -1); // true[1, 2, Na">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-12-28T00:49:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组includes方法">
-<meta name="twitter:description" content="借助 includes()方法求两个数组的交集（适用于对象数组）123456var a = [1, 2, &amp;#123; s: 3 &amp;#125;, &amp;#123; s: 4 &amp;#125;, &amp;#123; s: 5 &amp;#125;].map(item =&amp;gt; JSON.stringify(item));var b = [&amp;#123; s: 2 &amp;#125;, &amp;#123; s: 3 &amp;#125;, &amp;"> 
+<meta name="twitter:description" content="定义 includes() 方法用来判断一个数组是否包含一个指定的值，如果是返回 true，否则 false。  12345[1, 2, 3].includes(2); // true[1, 2, 3].includes(4); // false[1, 2, 3].includes(3, 3); // false[1, 2, 3].includes(3, -1); // true[1, 2, Na"> 
     <link rel="alternative" href="/atom.xml" title="Animye的博客" type="application/atom+xml">
      
     <link rel="icon" href="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1550604860929&di=149e6c581308ca04e8a009792c348be3&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Fsinacn%2F20170730%2F2620-fyiphwc3864204.jpg">
@@ -189,7 +189,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">187字</span>
+      <span class="post-count">247字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -213,10 +213,13 @@
 
     
     <div class="article-entry" itemprop="articleBody">
-       <h4 id="借助-includes-方法求两个数组的交集（适用于对象数组）"><a href="#借助-includes-方法求两个数组的交集（适用于对象数组）" class="headerlink" title="借助 includes()方法求两个数组的交集（适用于对象数组）"></a>借助 includes()方法求两个数组的交集（适用于对象数组）</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">5</span> &#125;].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"><span class="keyword">var</span> b = [&#123; <span class="attr">s</span>: <span class="number">2</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, <span class="string">"a"</span>].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> diff = a.filter(<span class="function"><span class="params">v</span> =&gt;</span> b.includes(v)).map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.parse(item));</span><br><span class="line"></span><br><span class="line"><span class="comment">// diff: [&#123;s: 3&#125;,&#123;s: 4&#125;]</span></span><br></pre></td></tr></table></figure>
+       <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>includes() 方法用来判断一个数组是否包含一个指定的值，如果是返回 true，否则 false。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].includes(<span class="number">2</span>); <span class="comment">// true</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].includes(<span class="number">4</span>); <span class="comment">// false</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].includes(<span class="number">3</span>, <span class="number">3</span>); <span class="comment">// false</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].includes(<span class="number">3</span>, <span class="number">-1</span>); <span class="comment">// true</span></span><br><span class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="literal">NaN</span>].includes(<span class="literal">NaN</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h4 id="借助-includes-方法求两个数组的交集（适用于对象数组）"><a href="#借助-includes-方法求两个数组的交集（适用于对象数组）" class="headerlink" title="借助 includes()方法求两个数组的交集（适用于对象数组）"></a>借助 includes()方法求两个数组的交集（适用于对象数组）</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">5</span> &#125;].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"><span class="keyword">var</span> b = [&#123; <span class="attr">s</span>: <span class="number">2</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, <span class="string">"a"</span>].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> diff = a.filter(<span class="function"><span class="params">v</span> =&gt;</span> b.includes(v)).map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.parse(item));</span><br><span class="line"></span><br><span class="line"><span class="comment">// diff: [&#123;s: 3&#125;,&#123;s: 4&#125;]</span></span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h4 id="借助-includes-方法求两个数组的差集（适用于对象数组）"><a href="#借助-includes-方法求两个数组的差集（适用于对象数组）" class="headerlink" title="借助 includes()方法求两个数组的差集（适用于对象数组）"></a>借助 includes()方法求两个数组的差集（适用于对象数组）</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">5</span> &#125;].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"><span class="keyword">var</span> b = [&#123; <span class="attr">s</span>: <span class="number">2</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">3</span> &#125;, &#123; <span class="attr">s</span>: <span class="number">4</span> &#125;, <span class="string">"a"</span>].map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.stringify(item));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> diff = a</span><br><span class="line">  .concat(b)</span><br><span class="line">  .filter(<span class="function"><span class="params">v</span> =&gt;</span> !a.includes(v) || !b.includes(v))</span><br><span class="line">  .map(<span class="function"><span class="params">item</span> =&gt;</span> <span class="built_in">JSON</span>.parse(item));</span><br><span class="line"></span><br><span class="line"><span class="comment">// diff: [1, 2, &#123;s:5&#125;, &#123;s:2&#125;, "a"]</span></span><br></pre></td></tr></table></figure>
-<p>测试用法women </p>
   
       <div class="page-reward">
         <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -307,7 +310,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">187字</span>
+      <span class="post-count">247字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -363,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#借助-includes-方法求两个数组的交集（适用于对象数组）"><span class="toc-number">1.</span> <span class="toc-text">借助 includes()方法求两个数组的交集（适用于对象数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#借助-includes-方法求两个数组的差集（适用于对象数组）"><span class="toc-number">2.</span> <span class="toc-text">借助 includes()方法求两个数组的差集（适用于对象数组）</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#定义"><span class="toc-number">1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#借助-includes-方法求两个数组的交集（适用于对象数组）"><span class="toc-number">2.</span> <span class="toc-text">借助 includes()方法求两个数组的交集（适用于对象数组）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#借助-includes-方法求两个数组的差集（适用于对象数组）"><span class="toc-number">3.</span> <span class="toc-text">借助 includes()方法求两个数组的差集（适用于对象数组）</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -405,7 +408,7 @@
       </div>
       <footer id="footer">
   <div class="outer">
-    <span style="margin-right:10px;" class="post-count">字数统计：22.5k</span>
+    <span style="margin-right:10px;" class="post-count">字数统计：23.1k</span>
     <span id="busuanzi_container_site_uv">
       本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
       <div id="footer-info">
@@ -548,6 +551,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
@@ -560,11 +567,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">jQuery - jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">常用</a>
               </li>
             
             <div class="clearfix"></div>

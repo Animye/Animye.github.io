@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Animye的博客">
 <meta property="og:description" content="vue 项目介绍组件只要是后缀名为 .vue 的文件都称为组件，可以把组件理解成之前 html 内的某个 div，整个 vue 项目就是由很多小的组件组合的。组件可以复用。组件的名称都是大写字母开头的，或者大驼峰方式 例如:HeaderTop">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-19T08:59:13.948Z">
+<meta property="og:updated_time" content="2020-01-20T03:25:52.722Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue">
 <meta name="twitter:description" content="vue 项目介绍组件只要是后缀名为 .vue 的文件都称为组件，可以把组件理解成之前 html 内的某个 div，整个 vue 项目就是由很多小的组件组合的。组件可以复用。组件的名称都是大写字母开头的，或者大驼峰方式 例如:HeaderTop"> 
@@ -462,7 +462,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  参数1：过滤器名称</span></span><br><span class="line"><span class="comment">//  参数2：过滤器的逻辑</span></span><br><span class="line"></span><br><span class="line">Vue.filter(<span class="string">"capitalize"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (!value) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">  value = value.toString();</span><br><span class="line">  <span class="keyword">return</span> value.charAt(<span class="number">0</span>).toUpperCase() + value.slice(<span class="number">1</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <h4 id="vuex-在模块中-getters-和-actions-命名重复会冲突，用命名空间即可解决"><a href="#vuex-在模块中-getters-和-actions-命名重复会冲突，用命名空间即可解决" class="headerlink" title="vuex 在模块中 getters 和 actions 命名重复会冲突，用命名空间即可解决"></a>vuex 在模块中 getters 和 actions 命名重复会冲突，用命名空间即可解决</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  namespaced: <span class="literal">true</span>,</span><br><span class="line">  state,</span><br><span class="line">  actions,</span><br><span class="line">  mutations</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h4 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">  xxx: &#123;</span><br><span class="line">    handler(newVal, oldVel) &#123;&#125;,</span><br><span class="line">    deep: <span class="literal">true</span>,</span><br><span class="line">    immediate: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123; <span class="attr">xxx</span>: &#123; handler(newVal, oldVel) &#123;&#125;, <span class="attr">deep</span>: <span class="literal">true</span>, <span class="attr">immediate</span>: <span class="literal">true</span> &#125; &#125;</span><br></pre></td></tr></table></figure>
   
       <div class="page-reward">
         <a href="javascript:;" class="page-reward-btn tooltip-top">
@@ -651,7 +651,7 @@
       </div>
       <footer id="footer">
   <div class="outer">
-    <span style="margin-right:10px;" class="post-count">字数统计：22.5k</span>
+    <span style="margin-right:10px;" class="post-count">字数统计：23.1k</span>
     <span id="busuanzi_container_site_uv">
       本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
       <div id="footer-info">
@@ -794,6 +794,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">shell</a>
               </li>
              
@@ -806,11 +810,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
+                <a href="javascript:void(0)" class="js-tag color1">jQuery - jQuery</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">常用</a>
               </li>
             
             <div class="clearfix"></div>
