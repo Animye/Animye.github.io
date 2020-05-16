@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Animye的博客">
 <meta property="og:description" content="js对象的合并和拷贝">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-20T03:33:34.369Z">
+<meta property="og:updated_time" content="2020-01-20T07:47:07.242Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="项目中常用的代码">
 <meta name="twitter:description" content="js对象的合并和拷贝"> 
@@ -190,7 +190,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">422字</span>
+      <span class="post-count">425字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -215,11 +215,11 @@
     
     <div class="article-entry" itemprop="articleBody">
        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><h3 id="对象的合并和拷贝"><a href="#对象的合并和拷贝" class="headerlink" title="对象的合并和拷贝"></a>对象的合并和拷贝</h3><a id="more"></a>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果健名相同后面的覆盖前面的</span></span><br><span class="line"><span class="built_in">Object</span>.assign(form, obj)-----&gt;<span class="built_in">Object</span>.assign(目标对象, 被合并的对象)</span><br><span class="line"><span class="comment">//如果不想修改目标对象，可以将目标对象改成空 &#123;&#125;，</span></span><br><span class="line"><span class="built_in">Object</span>.assign(&#123;&#125;,form, obj)</span><br><span class="line"></span><br><span class="line"><span class="comment">//对象的扩展运算符实现拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在此多补充一下对象的扩展运算符的用法：</span></span><br><span class="line"> <span class="comment">// 2.添加属性</span></span><br><span class="line">    <span class="keyword">let</span> obj3 = &#123;...obj,<span class="attr">color</span>:<span class="string">'brown'</span>&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj3)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.修改属性（即使是引用类型，也不会影响原来的值）</span></span><br><span class="line">    <span class="keyword">let</span> obj4 = &#123;...obj,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'梅花鹿'</span>&#125;&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj4)</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 数组的拷贝</span></span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    <span class="keyword">let</span> arr1 = [...arr]</span><br><span class="line">    <span class="built_in">console</span>.log(arr1)</span><br><span class="line"></span><br><span class="line"><span class="comment">//JSON.parse 实现深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> deepObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj ))</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//如果健名相同后面的覆盖前面的</span></span><br><span class="line"><span class="built_in">Object</span>.assign(form, obj)-----&gt;<span class="built_in">Object</span>.assign(目标对象, 被合并的对象)</span><br><span class="line"><span class="comment">//如果不想修改目标对象，可以将目标对象改成空 &#123;&#125;，</span></span><br><span class="line"><span class="built_in">Object</span>.assign(&#123;&#125;,form, obj)</span><br><span class="line"></span><br><span class="line"><span class="comment">//对象的扩展运算符实现拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> obj2 = &#123;...obj&#125;</span><br><span class="line"><span class="built_in">console</span>.log(obj2)</span><br><span class="line"></span><br><span class="line"><span class="comment">//在此多补充一下对象的扩展运算符的用法：</span></span><br><span class="line"> <span class="comment">// 2.添加属性</span></span><br><span class="line">    <span class="keyword">let</span> obj3 = &#123;...obj,<span class="attr">color</span>:<span class="string">'brown'</span>&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj3)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 3.修改属性（即使是引用类型，也不会影响原来的值）</span></span><br><span class="line">    <span class="keyword">let</span> obj4 = &#123;...obj,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'梅花鹿'</span>&#125;&#125;</span><br><span class="line">    <span class="built_in">console</span>.log(obj4)</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 数组的拷贝</span></span><br><span class="line">    <span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</span><br><span class="line">    <span class="keyword">let</span> arr1 = [...arr]</span><br><span class="line">    <span class="built_in">console</span>.log(arr1)</span><br><span class="line"></span><br><span class="line"><span class="comment">//JSON.parse 实现深拷贝</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">name</span>:<span class="string">'乔巴'</span>,<span class="attr">age</span>:<span class="string">'18'</span>,<span class="attr">type</span>:&#123;<span class="attr">name</span>:<span class="string">'驯鹿'</span>&#125;&#125;</span><br><span class="line"><span class="keyword">let</span> deepObj = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(obj ))</span><br><span class="line">Vue.extend()</span><br></pre></td></tr></table></figure>
 <h3 id="数组的合并去重"><a href="#数组的合并去重" class="headerlink" title="数组的合并去重"></a>数组的合并去重</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//合并</span></span><br><span class="line">xxx.concat();</span><br><span class="line">[...a, ...b];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 去重</span></span><br><span class="line">[...new <span class="built_in">Set</span>(xx)];</span><br></pre></td></tr></table></figure>
 <h3 id="json-转换"><a href="#json-转换" class="headerlink" title="json 转换"></a>json 转换</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//取</span></span><br><span class="line"><span class="built_in">JSON</span>.parse(）</span><br><span class="line"><span class="comment">//存</span></span><br><span class="line"><span class="built_in">JSON</span>.stringify(）</span><br></pre></td></tr></table></figure>
 <h3 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(<span class="string">'名'</span>） <span class="comment">//取</span></span><br><span class="line">localStorage.setItem(<span class="string">'名'</span>,<span class="string">'值'</span>）<span class="comment">//存</span></span><br></pre></td></tr></table></figure>
-<h3 id="缩减代码"><a href="#缩减代码" class="headerlink" title="缩减代码"></a>缩减代码</h3><p>(a || b) === (() =&gt; { if (a) {return a;} else {return b} })() === (a ? a : b)<br>(a &amp;&amp; b) === (() =&gt; { if (a) {return b;} else {return a} })() === (a ? b : a)</p>
+<h3 id="短路运算符"><a href="#短路运算符" class="headerlink" title="短路运算符"></a>短路运算符</h3><p>(a || b) === (() =&gt; { if (a) {return a;} else {return b} })() === (a ? a : b)<br>(a &amp;&amp; b) === (() =&gt; { if (a) {return b;} else {return a} })() === (a ? b : a)</p>
 <h2 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h2><h3 id="nextTick"><a href="#nextTick" class="headerlink" title="nextTick"></a>nextTick</h3><ul>
 <li>在下次 DOM 更新循环结束之后执行延迟回调。在修改数据之后立即使用这个方法，获取更新后的 DOM。</li>
 </ul>
@@ -329,7 +329,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">422字</span>
+      <span class="post-count">425字</span>
     </span>
   </span>
   &nbsp; | &nbsp;
@@ -348,6 +348,15 @@
 </article>
  
 <nav id="article-nav">
+  
+    <a href="/2020/05/16/vue传值/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          vue传值
+        
+      </div>
+    </a>
   
   
     <a href="/2019/12/03/Object-keys方法之详解/" id="article-nav-older" class="article-nav-link-wrap">
@@ -376,7 +385,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的合并和拷贝"><span class="toc-number">1.1.</span> <span class="toc-text">对象的合并和拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的合并去重"><span class="toc-number">1.2.</span> <span class="toc-text">数组的合并去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#json-转换"><span class="toc-number">1.3.</span> <span class="toc-text">json 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存储"><span class="toc-number">1.4.</span> <span class="toc-text">存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缩减代码"><span class="toc-number">1.5.</span> <span class="toc-text">缩减代码</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue"><span class="toc-number">2.</span> <span class="toc-text">vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nextTick"><span class="toc-number">2.1.</span> <span class="toc-text">nextTick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决路由报错"><span class="toc-number">2.2.</span> <span class="toc-text">解决路由报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch"><span class="toc-number">2.3.</span> <span class="toc-text">watch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lodash"><span class="toc-number">3.</span> <span class="toc-text">lodash</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#js"><span class="toc-number">1.</span> <span class="toc-text">js</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#对象的合并和拷贝"><span class="toc-number">1.1.</span> <span class="toc-text">对象的合并和拷贝</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的合并去重"><span class="toc-number">1.2.</span> <span class="toc-text">数组的合并去重</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#json-转换"><span class="toc-number">1.3.</span> <span class="toc-text">json 转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#存储"><span class="toc-number">1.4.</span> <span class="toc-text">存储</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#短路运算符"><span class="toc-number">1.5.</span> <span class="toc-text">短路运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vue"><span class="toc-number">2.</span> <span class="toc-text">vue</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#nextTick"><span class="toc-number">2.1.</span> <span class="toc-text">nextTick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决路由报错"><span class="toc-number">2.2.</span> <span class="toc-text">解决路由报错</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#watch"><span class="toc-number">2.3.</span> <span class="toc-text">watch</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lodash"><span class="toc-number">3.</span> <span class="toc-text">lodash</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -418,7 +427,7 @@
       </div>
       <footer id="footer">
   <div class="outer">
-    <span style="margin-right:10px;" class="post-count">字数统计：23.1k</span>
+    <span style="margin-right:10px;" class="post-count">字数统计：23.7k</span>
     <span id="busuanzi_container_site_uv">
       本站访客数<span id="busuanzi_value_site_uv"></span>人次</span>
       <div id="footer-info">
@@ -553,6 +562,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">nuxt</a>
               </li>
              
@@ -561,7 +574,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">轮播图</a>
+                <a href="javascript:void(0)" class="js-tag color3">常用</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -578,14 +591,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">原生JS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">jQuery - jQuery</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">常用</a>
               </li>
             
             <div class="clearfix"></div>
